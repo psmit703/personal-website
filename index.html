@@ -21,12 +21,13 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-2 mb-5 shadow">
+    <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand navbar-brand-custom" href="./">
                 <!-- NEED TO ROUND CORNERS OF LOGO -->
                 <img src="./assets/images/site-logo-1080.jpeg" width="50" height="50"
-                    class="d-inline-block align-center nav-logo" alt="Site logo">Pete Smith </a>
+                    class="d-inline-block align-center nav-logo" alt="Site logo">Pete Smith
+            </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options"
                 aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,13 +36,16 @@
 
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active mx-3">
+                    <li class="nav-item mx-2 active active-custom">
                         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item mx-3">
+                    <li class="nav-item ml-2">
+                        <a class="nav-link" href="./resume.html">Résumé</a>
+                    </li>
+                    <li class="nav-item mx-2">
                         <a class="nav-link" href="./coding.html">Coding Projects</a>
                     </li>
-                    <li class="nav-item ml-3">
+                    <li class="nav-item mx-2">
                         <a class="nav-link" href="./writing.html">Writing Samples</a>
                     </li>
                 </ul>
@@ -56,8 +60,8 @@
 
 
 
-
-        <footer class="footer text-muted mx-auto">
+        <hr />
+        <footer class="footer text-muted text-center">
             <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
             <p>Powered by <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap 4.3.1</a>
             </p>
