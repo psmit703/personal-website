@@ -40,10 +40,66 @@
 
 /* spaces non-navbar content to accomodate the fixed navbar */
 .body-content-custom {
-    margin: 116px 0 0;
+    margin: 116px 0px 0;
 }
 
-/* spaces footer */
+/* adds space in between footer and line */
 footer {
-    margin: 30px 0 0;
+    margin: 30px 0 30px;
+}
+
+/* adds space in between body content and line */
+hr {
+    margin: 40px 0 0px;
+}
+
+/* stylizes cards for resume subpage */
+.card-custom {
+    width: 400px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    margin: 0 0 40px;
+}
+
+.intro-custom {
+    font-size: 40px;
+    width: 400px;
+}
+
+/* stylizes font size for GitHub, LinkedIn, and email address */
+.links-custom {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* adds space in between GitHub, LinkedIn, and email address icons and their respective text */
+.each-link-custom {
+    margin-right: 10px;
+    color: black;
+}
+
+/* adds space in between download icon and the word "Download" */
+.download-custom {
+    margin-right: 10px;
+}
+
+/* adds vertical space for GitHub, LinkedIn, and email address for smaller screens */
+/* centers each */
+.col-custom {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.langs-custom {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.col-header-custom {
+    border-right: 3px solid #111111;
+    text-align: left;
+}
+
+.card-custom {
+    width: 800px
 }
