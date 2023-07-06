@@ -1,10 +1,8 @@
-<img src="/assets/images/site-logo-1080.jpeg" alt="Site logo" width="125px">
-
 ## [psmit.dev](https://www.psmit.dev)
 #### A personal portfolio website for all things Pete Smith
 #### [Repo Link](https://github.com/psmit703/personal-website)
 
-Welcome to my portfolio! The following is a brief description of software/services used in the site, along with a general description of each page. All URLs listed can either be accessed with or without the "www" subdomain and with or without a "/" at the end. URLs without the "www" subdomain will automatically redirect to
+Welcome to my portfolio! The following is a brief description of software/services used in the site, along with a general description of each page. All URLs listed can either be accessed with or without the "www" subdomain. URLs without the "www" subdomain will automatically redirect to
 
     https://www.psmit.dev
 
