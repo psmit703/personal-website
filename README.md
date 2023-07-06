@@ -12,14 +12,14 @@ The relative directories (e.g., "/index.html" in "Home | /index.html" in the sec
 
 #### Sitewide | [Main Repo Branch (Live Site Files)](https://github.com/psmit703/personal-website/tree/main)
 This is a general overview of technologies (except HTML, CSS, and JavaScript) found in or otherwise utilized by many or all of this site's pages.
-* Bootstrap
+* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
     * Bootstrap is a free, open-source CSS framework that eases the frontend development process and allows for a high degree of responsiveness when viewing sites on different devices (e.g., computers, phones, etc.)
-    * This site heavily utilizes the Bootstrap CSS framework for its stylization and responsiveness
-    * One of Bootstrap's main criticisms, that creating unique webpages with it is difficult, was addressed through a custom CSS file on my part ( /assets/css/styles.css )
+    * This site heavily utilizes Bootstrap for its stylization and responsiveness
+    * One of Bootstrap's main criticisms, that creating unique webpages with it is difficult, was addressed through a [custom CSS file](https://github.com/psmit703/personal-website/blob/main/assets/css/styles.css) on my part
     * This site specifically uses Bootstrap 4.3.1
-* GitHub Pages
+* [GitHub Pages](https://pages.github.com/)
     * GitHub Pages is a service offered by GitHub that allows people to host sites for free in a secure and relatively simple way
-    * This site is hosted by GitHub pages in my repository ( psmit703/personal-website )
+    * This site is hosted by GitHub pages in the [main branch of this repository](https://github.com/psmit703/personal-website/tree/main)
     * GitHub Pages' configuration settings were also used as part of the DNS configuration and securty certificate process
 
 
@@ -60,6 +60,8 @@ The writing page is where all of my writing samples are and can be accessed at
 
     https://psmit.dev/writing.html
 
+This page contains various papers I have written for some of my History classes. I may also upload samples from other classes when I see fit, as well as samples from non-class related writing.
+
 
 
 #### Error 404 | [/404.html](https://github.com/psmit703/personal-website/blob/main/404.html)
@@ -67,4 +69,4 @@ As the name suggests, this is my site's "Error 404" page. It is displayed whenev
 
     https://www.psmit.dev/404.html
 
-In addition to the previously discussed technologies, /404.html makes use of a (very short) custom JavaScript file ( /assets/js/404.js ). The JS file is used for pulling the current URL and displaying it to the user.
+In addition to the previously discussed technologies, /404.html makes use of a (very short) [custom JavaScript file](https://github.com/psmit703/personal-website/blob/main/assets/js/404.js). The JS file is used for pulling the current URL and displaying it to the user.
