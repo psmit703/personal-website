@@ -45,12 +45,12 @@
 
 /* adds space in between footer and line */
 footer {
-    margin: 10px 0 30px;
+    margin: 20px 0 30px;
 }
 
 /* adds space in between body content and line */
 hr {
-    margin: 40px 0 40px;
+    margin: 40px 0 30px;
 }
 
 /* stylizes cards for resume subpage */
@@ -102,4 +102,8 @@ hr {
 .header-404-custom {
     font-size: 40px;
     margin: 0 0 25px
+}
+
+.quick-facts-custom {
+    font-weight: bold;
 }
