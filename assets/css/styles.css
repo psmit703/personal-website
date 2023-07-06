@@ -45,12 +45,12 @@
 
 /* adds space in between footer and line */
 footer {
-    margin: 30px 0 30px;
+    margin: 10px 0 30px;
 }
 
 /* adds space in between body content and line */
 hr {
-    margin: 40px 0 0px;
+    margin: 40px 0 40px;
 }
 
 /* stylizes cards for resume subpage */
@@ -93,11 +93,6 @@ hr {
 .langs-custom {
     margin-bottom: 30px;
     font-weight: bold;
-}
-
-.col-header-custom {
-    border-right: 3px solid #111111;
-    text-align: left;
 }
 
 .card-custom {
