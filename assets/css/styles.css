@@ -107,3 +107,13 @@ hr {
 .quick-facts-custom {
     font-weight: bold;
 }
+
+.technical-resume-custom {
+    height: auto;
+    width: auto;
+}
+
+.humanities-resume-custom {
+    height: auto;
+    width: auto;
+}
