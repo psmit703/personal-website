@@ -106,3 +106,7 @@ hr {
 .quick-facts-custom {
     font-weight: bold;
 }
+
+.card {
+    border-radius: 25px;
+}
