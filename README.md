@@ -42,6 +42,8 @@ This page displays both my technical and humanities résumés and can be accesse
 
     https://psmit.dev/resume.html
 
+This uses [Adobe's PDF Embed API](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api/) to render both my technical and humanities résumés, which are stored in .pdf format.
+
 
 
 #### Coding | [/coding.html](https://github.com/psmit703/personal-website/blob/main/coding.html)
@@ -61,6 +63,15 @@ The writing page is where all of my writing samples are and can be accessed at
     https://psmit.dev/writing.html
 
 This page contains various papers I have written for some of my History classes. I may also upload samples from other classes when I see fit, as well as samples from non-class related writing.
+
+
+
+### Privacy Policy | [/privacy.html](https://github.com/psmit703/personal-website/blob/main/privacy.html)
+This is my site's privacy policy. It can either be accessed at the bottom of each page or directly at
+
+    https://psmit.dev/privacy.html
+
+While the code I have written does not collect data or otherwise raise concerns for any potential privacy infringements, the site uses several third party tools. As such and in the interest of transparency, this page contains disclaimers regarding privacy relating to these tools.
 
 
 

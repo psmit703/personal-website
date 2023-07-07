@@ -1,7 +1,7 @@
 /* stylizes logo in navbar */
 .nav-logo-custom {
     border-radius: 10px;
-    border: 2px solid #111111;
+    border: 3px solid #111111;
     margin: 0 20px 0 0;
 }
 
@@ -45,12 +45,12 @@
 
 /* adds space in between footer and line */
 footer {
-    margin: 20px 0 30px;
+    margin: 0 0 40px;
 }
 
 /* adds space in between body content and line */
 hr {
-    margin: 40px 0 30px;
+    margin: 40px 0 40px;
 }
 
 /* stylizes cards for resume subpage */
@@ -91,7 +91,6 @@ hr {
 }
 
 .langs-custom {
-    margin-bottom: 30px;
     font-weight: bold;
 }
 
@@ -106,14 +105,4 @@ hr {
 
 .quick-facts-custom {
     font-weight: bold;
-}
-
-.technical-resume-custom {
-    height: 5000px;
-    width: auto;
-}
-
-.humanities-resume-custom {
-    height: auto;
-    width: auto;
 }

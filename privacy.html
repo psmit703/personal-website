@@ -2,13 +2,13 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-    <title>Résumé | Pete Smith</title>
+    <title>Privacy Policy | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <meta name="description" content="My Résumé">
+    <meta name="description" content="Privacy Policy">
     <meta name="author" content="Pete Smith">
 
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://www.psmit.dev/resume.html">
+    <link rel="canonical" href="https://www.psmit.dev/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -25,6 +25,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top">
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="/">
+                <!-- NEED MORE SIZES FOR LOGO -->
                 <img src="/assets/images/site-logo-1080.jpeg" width="50" height="50"
                     class="d-inline-block align-center nav-logo-custom" alt="Site logo">Pete Smith
             </a>
@@ -36,11 +37,11 @@
 
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link nav-home-custom" href="/">Home<span class="sr-only">(current)</span></a>
+                    <li class="nav-item mx-2 active active-custom">
+                        <a class="nav-link nav-home-custom" href="/">Home</a>
                     </li>
-                    <li class="nav-item ml-2 active active-custom">
-                        <a class="nav-link nav-resume-custom" href="#">Résumé</a>
+                    <li class="nav-item ml-2">
+                        <a class="nav-link nav-resume-custom" href="/resume.html">Résumé</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link nav-coding-custom" href="/coding.html">Coding Projects</a>
@@ -55,62 +56,17 @@
 
 
     <div class="container">
+
         <div class="body-content-custom">
 
-            <div id="technical-resume-custom" style="height: 660px; width: 510px; margin: auto;"></div>
-            <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-            <script type="text/javascript">
-                document.addEventListener("adobe_dc_view_sdk.ready", function () {
-                    var adobeDCView = new AdobeDC.View({ clientId: "b32827ef44d9406395e169bf3feca8c4", divId: "technical-resume-custom" });
-                    adobeDCView.previewFile(
-                        {
-                            content: { location: { url: "/assets/resumes/Pete_Smith_Resume_(Technical).pdf" } },
-                            metaData: { fileName: "Pete Smith Résumé (Technical)", hasReadOnlyAccess: true }
-                        },
-                        {
-                            embedMode: "SIZED_CONTAINER",
-                            showFullScreen: true,
-                            showDownloadPDF: true,
-                            showPrintPDF: true
-                        }
 
-                    );
-                });
-            </script>
-            <p class="text-center"><a href="/assets/resumes/Pete_Smith_Resume_(Technical).pdf">Technical Résumé Direct
-                    Download</a></p>
 
-            <hr />
-
-            <div id="humanities-resume-custom" style="height: 660px; width: 510px; margin: auto;"></div>
-            <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-            <script type="text/javascript">
-                document.addEventListener("adobe_dc_view_sdk.ready", function () {
-                    var adobeDCView = new AdobeDC.View({ clientId: "b32827ef44d9406395e169bf3feca8c4", divId: "humanities-resume-custom" });
-                    adobeDCView.previewFile(
-                        {
-                            content: { location: { url: "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf" } },
-                            metaData: { fileName: "Pete Smith Résumé (Humanities)", hasReadOnlyAccess: true }
-                        },
-                        {
-                            embedMode: "SIZED_CONTAINER",
-                            showFullScreen: true,
-                            showDownloadPDF: true,
-                            showPrintPDF: true
-                        }
-
-                    );
-                });
-            </script>
-            <p class="text-center"><a href="/assets/resumes/Pete_Smith_Resume_(Humanities).pdf">Humanities
-                    Résumé Direct Download</a></p>
 
             <hr />
             <footer class="footer text-muted text-center">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="https://github.com/psmit703/personal-website">GitHub Repository</a> | <a
-                        href="/privacy.html">Privacy
-                        Policy</a></p>
+                        href="/privacy.html">Privacy Policy</a></p>
             </footer>
         </div>
     </div>
