@@ -66,7 +66,7 @@ This page contains various papers I have written for some of my History classes.
 
 
 
-### Privacy Policy | [/privacy.html](https://github.com/psmit703/personal-website/blob/main/privacy.html)
+#### Privacy Policy | [/privacy.html](https://github.com/psmit703/personal-website/blob/main/privacy.html)
 This is my site's privacy policy. It can either be accessed at the bottom of each page or directly at
 
     https://psmit.dev/privacy.html
