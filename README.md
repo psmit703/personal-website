@@ -35,6 +35,8 @@ or
 
 and contains my general background and some useful information regarding my programming skills. It also has links to my professional profiles (GitHub and LinkedIn), along with my email address.
 
+This page makes use of a [custom JavaScript file](https://github.com/psmit703/personal-website/blob/main/assets/js/random-image.js) for displaying a random image. For aesthetic purposes, an image will only display at (in my opinion) appropriate aspect ratios, i.e., when the window's width divided by its height becomes too small for my liking, no images will be displayed. I believe this allows for a cleaner look on smaller devices such as phones and tablets, where the main focus of using a browser (in my opinion) is to get information. While that is also a large focus of using browsers on larger screens such as with a laptop or desktop, their larger screens allow for more to be displayed, which is often shown through "decorations" such as images. Lastly, as GitHub Pages does not support get requests, the image names alt text had to be manually hardcoded into the JS file.
+
 
 
 #### Résumé | [/resume.html](https://github.com/psmit703/personal-website/blob/main/resume.html)
@@ -42,7 +44,7 @@ This page displays both my technical and humanities résumés and can be accesse
 
     https://psmit.dev/resume.html
 
-This uses [Adobe's PDF Embed API](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api/) to render both my technical and humanities résumés, which are stored in .pdf format.
+This uses [Adobe's PDF Embed API](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api/) to render both my technical and humanities résumés, which are stored in .pdf format. While the embeded documents have their own options to download each PDF, I have also included separate links for downloading the PDFs on the off chance that Adobe's service is not working.
 
 
 
