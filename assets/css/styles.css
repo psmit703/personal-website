@@ -64,6 +64,7 @@ hr {
 .intro-custom {
     font-size: 40px;
     width: 400px;
+    margin: 0 0 40px;
 }
 
 /* stylizes font size for GitHub, LinkedIn, and email address */
