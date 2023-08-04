@@ -115,6 +115,10 @@ hr {
     border-color: transparent !important;
 }
 
+.navbar-toggler:focus {
+    outline: none;
+}
+
 @keyframes nav-rot-on {
     from {
         transform: rotate(0deg);
