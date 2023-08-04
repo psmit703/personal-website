@@ -138,3 +138,8 @@ hr {
         transform: rotate(0deg);
     }
 }
+
+.navbar {
+    top: 0;
+    transition: top 0.3s ease-in-out;
+}
