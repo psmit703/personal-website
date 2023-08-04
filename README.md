@@ -11,7 +11,7 @@ The relative directories (e.g., "/index.html" in "Home | /index.html" in the sec
 
 
 #### Sitewide | [Main Repo Branch (Live Site Files)](https://github.com/psmit703/personal-website/tree/main)
-This is a general overview of technologies (except HTML, CSS, and JavaScript) found in or otherwise utilized by many or all of this site's pages.
+This is a general overview of technologies (except HTML and CSS) found in or otherwise utilized by many or all of this site's pages.
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
     * Bootstrap is a free, open-source CSS framework that eases the frontend development process and allows for a high degree of responsiveness when viewing sites on different devices (e.g., computers, phones, etc.)
     * This site heavily utilizes Bootstrap for its stylization and responsiveness
@@ -21,6 +21,11 @@ This is a general overview of technologies (except HTML, CSS, and JavaScript) fo
     * GitHub Pages is a service offered by GitHub that allows people to host sites for free in a secure and relatively simple way
     * This site is hosted by GitHub pages in the [main branch of this repository](https://github.com/psmit703/personal-website/tree/main)
     * GitHub Pages' configuration settings were also used as part of the DNS configuration and securty certificate process
+* [Navbar Menu Button JavaScript File](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-button.js)
+    * This is a script that I wrote that is present on every page of the site
+    * Its purpose is to rotate/unrotate the navbar menu button when it is toggled
+    * It detects when the navbar menu button is clicked, and, depending on its current state, either rotates it clockwise or counter-clockwise
+    * This is only visible when the site is used in its mobile format, however the script is loaded regardless
 
 
 

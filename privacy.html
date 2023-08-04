@@ -19,6 +19,9 @@
 
     <!-- custom stylesheet across subpages -->
     <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <!-- navbar button script -->
+    <script defer src="/assets/js/navbar-button.js"></script>
 </head>
 
 <body>
@@ -68,13 +71,19 @@
                     user's browser window in order to determine whether or not to display an image. If the aspect ratio
                     is too small, then no image is displayed. This is done to create, in my opinion, a better aesthetic
                     on mobile devices. All of the processing is done by the user's browser and nothing is stored or sent
-                    back to me (Pete Smith) in any form.
+                    back to me (Pete Smith) in any way.
                 </li>
                 <li>The <a href="https://www.psmit.dev/404.html">Error 404 Page</a> uses JavaScript to determine the URL
                     that a user has inputted. As this page is an error page, the URL is used in a message displayed to
                     the user. All of the processing is done by the user's browser and nothing is stored or sent back to
-                    me (Pete Smith) in any form.
+                    me (Pete Smith) in any way.
                 </li>
+                <li>Every page uses JavaScript for creating an animation for the navbar menu button. While the button is
+                    only visible/usable in mobile format, the script is loaded regardless. When the navbar is collapsed
+                    and the navbar menu button is pressed, it rotates 90 degrees clockwise. Similarly, if the navbar
+                    menu is open and the navbar menu button is pressed, it rotate 90 degrees counter-clockwise back to
+                    its original state. All of the processing is done by the user's browser and nothign is stored or
+                    sent back to me (Pete Smith) in any way.</li>
             </ul>
             The code I have written does not otherwise process, store, or use any user data in any form and does not use
             cookies.
