@@ -110,3 +110,27 @@ hr {
 .card {
     border-radius: 25px;
 }
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
+
+@keyframes nav-rot-on {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes nav-rot-off {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
