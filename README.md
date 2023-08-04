@@ -21,13 +21,26 @@ This is a general overview of technologies (except HTML and CSS) found in or oth
     * GitHub Pages is a service offered by GitHub that allows people to host sites for free in a secure and relatively simple way
     * This site is hosted by GitHub pages in the [main branch of this repository](https://github.com/psmit703/personal-website/tree/main)
     * GitHub Pages' configuration settings were also used as part of the DNS configuration and securty certificate process
+* [Google Search Console](https://search.google.com/search-console/about) | [Bing Search Console](https://www.bing.com/webmasters/about)
+    * Google Search Console and Bing Search Console are developer tools for their respective search engines
+    * They allow for indexing sites in their search engines, among other related features
+    * This site is configured for both services
+    * This does not in any way affect the user and no related data is loaded while using the site
+* [IndexNow](https://www.indexnow.org/)
+    * IndexNow is an API that is used to make site updates known to search engines
+    * This site is configured for IndexNow
+    * This is not loaded in any way by a user while visiting pages on the site
+        * The one exception is if a user directly access the API key file's URL
+        * In this case, a .txt file is loaded by the user's browser and nothing else    
 * [Navbar Menu Button JavaScript File](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-button.js)
     * This is a script that I wrote that is present on every page of the site
     * Its purpose is to rotate/unrotate the navbar menu button when it is toggled
     * It detects when the navbar menu button is clicked, and, depending on its current state, either rotates it clockwise or counter-clockwise
     * This is only visible when the site is used in its mobile format, however the script is loaded regardless
-
-
+* [Navbar Scrolling JavaScript File](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-scroll.js)
+    * This is a script that I wrote that is present on every page of the site
+    * Its purpose is to make the navigation bar either visible or invisible via CSS animations
+    * Triggering an animation is dependent on scrolling and mouse position
 
 #### Home | [/index.html](https://github.com/psmit703/personal-website/blob/main/index.html)
 This is my site's home page; it can be accessed at either
