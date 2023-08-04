@@ -33,11 +33,9 @@ window.onmousemove = function (event) {
 
     if (mouseAtTop || prevScrollPos == 0 || dropdown.classList.contains("show")
         || dropdown.classList.contains("collapsing")) {
-        console.log(prevScrollPos, window.scrollY)
         navBar.style.top = "0";
     } else if (mouseY > prevMouseY) {
         navBar.style.top = "-100px";
-        console.log("hidden")
     }
 
     prevMouseY = mouseY;

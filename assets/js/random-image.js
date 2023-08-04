@@ -4,8 +4,6 @@ viewHeight = window.innerHeight;
 if (viewWidth / viewHeight < 1000 / 720) {
     document.getElementById("img-parent").remove();
 } else {
-    console.log()
-
     rand = Math.floor(Math.random() * 5) + 1;
 
     pictDir = "/assets/images/random-image/image" + rand + ".jpg";
