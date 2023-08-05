@@ -1,4 +1,4 @@
-let navBar = document.getElementsByClassName("navbar")[0];
+let navbar = document.getElementsByClassName("navbar")[0];
 let dropdown = document.getElementById("navbar-options");
 
 let prevScrollPos = window.scrollY;
@@ -10,20 +10,42 @@ let mouseAtTop = false;
 window.onscroll = function () {
     let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) {
-        navBar.style.top = "0";
+        navbar.style.top = "0";
     } else {
         if (dropdown.classList.contains("show") == false && mouseAtTop == false) {
-            navBar.style.top = "-100px";
+            navbar.style.top = "-100px";
         }
     }
     prevScrollPos = currentScrollPos;
 }
 
 window.onmousemove = function (event) {
-    mouseY = event.clientY
-    if (prevMouseY == undefined) {
+    let navWidth = document.defaultView.getComputedStyle(navbar).width
+    navWidth = navWidth.substring(0, navWidth.length - 2)
+    navWidth = parseInt(navWidth)
+
+    if (navWidth >= 768) {
+        mouseY = event.clientY
+        if (prevMouseY == undefined) {
+            prevMouseY = mouseY;
+        }
+
+        if (mouseY <= 124) {
+            mouseAtTop = true;
+        } else {
+            mouseAtTop = false;
+        }
+
+        if (mouseAtTop || prevScrollPos == 0 || dropdown.classList.contains("show")
+            || dropdown.classList.contains("collapsing")) {
+            navbar.style.top = "0";
+        } else if (mouseY > prevMouseY) {
+            navbar.style.top = "-100px";
+        }
+
         prevMouseY = mouseY;
     }
+<<<<<<< Updated upstream
 
     if (mouseY <= 124) {
         mouseAtTop = true;
@@ -40,3 +62,6 @@ window.onmousemove = function (event) {
 
     prevMouseY = mouseY;
 }
+=======
+}
+>>>>>>> Stashed changes
