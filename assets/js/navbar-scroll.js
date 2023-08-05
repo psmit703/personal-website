@@ -45,23 +45,4 @@ window.onmousemove = function (event) {
 
         prevMouseY = mouseY;
     }
-<<<<<<< Updated upstream
-
-    if (mouseY <= 124) {
-        mouseAtTop = true;
-    } else {
-        mouseAtTop = false;
-    }
-
-    if (mouseAtTop || prevScrollPos == 0 || dropdown.classList.contains("show")
-        || dropdown.classList.contains("collapsing")) {
-        navBar.style.top = "0";
-    } else if (mouseY > prevMouseY) {
-        navBar.style.top = "-100px";
-    }
-
-    prevMouseY = mouseY;
 }
-=======
-}
->>>>>>> Stashed changes
