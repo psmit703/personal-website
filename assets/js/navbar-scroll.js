@@ -13,9 +13,14 @@ let mouseAtTop = false;
 
 window.onscroll = function () {
     let currentScrollPos = window.scrollY;
+    let navWidth = document.defaultView.getComputedStyle(navbar).width
+    navWidth = navWidth.substring(0, navWidth.length - 2)
+    navWidth = parseInt(navWidth)
+
+
     if (prevScrollPos > currentScrollPos) {
         navbar.style.top = "0";
-        if (window.scrollY == 0) {
+        if (window.scrollY == 0 || navWidth < 768) {
             darkModeWrapper.style.animation = "dark-mode-scroll-visible 0.3s ease-in-out forwards";
             darkModeWrapperVisible = true;
         }
