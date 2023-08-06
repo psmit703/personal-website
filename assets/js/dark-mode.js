@@ -124,8 +124,7 @@ darkModeBtn.addEventListener("click", function () {
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
 
-        if (scrollInit != scrollEnd) {
-            console.log("scrollInit >= scrollEnd")
+        if (scrollInit == scrollEnd) {
             animationActive = false;
         }
     } else {
@@ -140,7 +139,7 @@ darkModeBtn.addEventListener("click", function () {
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
 
-        if (scrollInit != scrollEnd) {
+        if (scrollInit == scrollEnd) {
             animationActive = false;
         }
     }
