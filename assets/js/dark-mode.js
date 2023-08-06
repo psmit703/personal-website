@@ -114,6 +114,7 @@ function moveBtn(direction) {
 darkModeBtn.addEventListener("click", function () {
     if (darkModeOn) {
         animationActive = true;
+        let scrollInit = window.scrollY;
         moveBtn("left")
         toLightMode();
         darkModeOn = false;
@@ -121,9 +122,15 @@ darkModeBtn.addEventListener("click", function () {
         document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
-        animationActive = false;
+        let scrollEnd = window.scrollY;
+
+        if (scrollInit != scrollEnd) {
+            console.log("scrollInit >= scrollEnd")
+            animationActive = false;
+        }
     } else {
         animationActive = true;
+        let scrollInit = window.scrollY;
         moveBtn("right")
         toDarkMode();
         darkModeOn = true;
@@ -131,6 +138,10 @@ darkModeBtn.addEventListener("click", function () {
         document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
-        animationActive = false;
+        let scrollEnd = window.scrollY;
+
+        if (scrollInit != scrollEnd) {
+            animationActive = false;
+        }
     }
 });

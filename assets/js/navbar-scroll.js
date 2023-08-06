@@ -33,6 +33,8 @@ window.onscroll = function () {
             }
         }
         prevScrollPos = currentScrollPos;
+    } else {
+        animationActive = false;
     }
 }
 
@@ -81,6 +83,7 @@ window.onmousemove = function (event) {
 
         prevMouseY = mouseY;
         prevMouseX = mouseX;
+    } else {
+
     }
 }
-
