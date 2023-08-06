@@ -1,19 +1,29 @@
 let navbar = document.getElementsByClassName("navbar")[0];
 let dropdown = document.getElementById("navbar-options");
+let darkModeWrapper = document.getElementById("dark-mode-btn");
+let darkModeWrapperVisible = true;
 
 let prevScrollPos = window.scrollY;
 
 let prevMouseY = undefined;
+let prevMouseX = undefined;
 let mouseY = undefined;
+let mouseX = undefined;
 let mouseAtTop = false;
 
 window.onscroll = function () {
     let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) {
         navbar.style.top = "0";
+        if (window.scrollY == 0) {
+            darkModeWrapper.style.animation = "dark-mode-scroll-visible 0.3s ease-in-out forwards";
+            darkModeWrapperVisible = true;
+        }
     } else {
         if (dropdown.classList.contains("show") == false && mouseAtTop == false) {
             navbar.style.top = "-100px";
+            darkModeWrapper.style.animation = "dark-mode-scroll-hidden 0.3s ease-in-out forwards";
+            darkModeWrapperVisible = false;
         }
     }
     prevScrollPos = currentScrollPos;
@@ -26,8 +36,13 @@ window.onmousemove = function (event) {
 
     if (navWidth >= 768) {
         mouseY = event.clientY
+        mouseX = event.clientX
+        let viewportWidth = document.documentElement.clientWidth
         if (prevMouseY == undefined) {
             prevMouseY = mouseY;
+        }
+        if (prevMouseX == undefined) {
+            prevMouseX = mouseX;
         }
 
         if (mouseY <= 124) {
@@ -43,6 +58,20 @@ window.onmousemove = function (event) {
             navbar.style.top = "-100px";
         }
 
-        prevMouseY = mouseY;
+
+
+        if (mouseX <= viewportWidth * 0.15 && darkModeWrapperVisible == false) {
+            darkModeWrapper.style.animation = "dark-mode-scroll-visible 0.3s ease-in-out forwards";
+            darkModeWrapperVisible = true;
+
+        } else if (mouseX > viewportWidth * 0.15 && mouseX > prevMouseX && window.scrollY > 0) {
+            darkModeWrapper.style.animation = "dark-mode-scroll-hidden 0.3s ease-in-out forwards";
+            darkModeWrapperVisible = false;
+        }
     }
+
+
+    prevMouseY = mouseY;
+    prevMouseX = mouseX;
 }
+

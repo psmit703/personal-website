@@ -1,15 +1,32 @@
-darkModeBtn = document.getElementById("dark-mode-btn");
+darkModeBtn = document.getElementById("btn-circle");
+slider = document.getElementById("btn-circle");
 darkModeOn = false;
 
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-// just using true for testing purposes
-// will change condition when completed and/or as needed
-// light mode is default
+cookies = document.cookie.split("; ");
+for (let i = 0; i < cookies.length; i++) {
+    if (cookies[i].split("=")[0] == "darkModeOn") {
+        if (cookies[i].split("=")[1] == "true") {
+            darkModeOn = true;
+            document.cookie = "darkModeOn=true; max-age" + 30 * 24 * 60 * 60 + "; path=/"
+        } else if (cookies[i].split("=")[1] == "false") {
+            darkModeOn = false;
+            document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
+        } else {
+            console.log("Error: invalid cookie value for darkModeOn in /assets/js/dark-mode.js");
+        }
+    }
+}
 
-if (true) {
+// light mode is default
+if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || darkModeOn) {
+    slider.style.marginLeft = "37px"
     toDarkMode();
-    // change icon without animation
     darkModeOn = true;
+    slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
+
+    // update expiration date for cookie
+} else {
+    slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
 }
 
 function toDarkMode() {
@@ -38,6 +55,11 @@ function toDarkMode() {
     let contactSVGs = document.getElementsByClassName("contactSVG");
     for (let i = 0; i < contactSVGs.length; i++) {
         contactSVGs[i].style.color = "rgb(248, 249, 250)";
+    }
+
+    let dividers = document.getElementsByTagName("hr");
+    for (let i = 0; i < dividers.length; i++) {
+        dividers[i].style.borderColor = "#888888"
     }
 }
 
@@ -68,16 +90,38 @@ function toLightMode() {
     for (let i = 0; i < contactSVGs.length; i++) {
         contactSVGs[i].style.color = "black";
     }
+
+    let dividers = document.getElementsByTagName("hr");
+    for (let i = 0; i < dividers.length; i++) {
+        dividers[i].style.borderColor = "rgba(0, 0, 0, 0.1)"
+    }
+}
+
+function moveBtn(direction) {
+    if (direction == "left") {
+        slider.style.animation = "dark-mode-off 0.3s ease-in-out forwards";
+        slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
+    } else if (direction == "right") {
+        slider.style.animation = "dark-mode-on 0.3s ease-in-out forwards";
+        slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
+    } else {
+        console.log("Error: moveBtn() called with invalid argument in /assets/js/dark-mode.js");
+    }
 }
 
 darkModeBtn.addEventListener("click", function () {
     if (darkModeOn) {
+        moveBtn("left")
         toLightMode();
         darkModeOn = false;
         document.cookie = "darkModeOn=false";
+        document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
     } else {
+        moveBtn("right")
         toDarkMode();
         darkModeOn = true;
         document.cookie = "darkModeOn=true";
+        document.cookie = "darkModeOn=true; max-age" + 30 * 24 * 60 * 60 + "; path=/"
+
     }
 });
