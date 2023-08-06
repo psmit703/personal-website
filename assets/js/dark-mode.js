@@ -2,6 +2,7 @@ darkModeBtn = document.getElementById("btn-circle");
 darkModeBtnWrapper = document.getElementById("dark-mode-btn");
 slider = document.getElementById("btn-circle");
 darkModeOn = false;
+let animationActive = false;
 
 cookies = document.cookie.split("; ");
 for (let i = 0; i < cookies.length; i++) {
@@ -112,6 +113,7 @@ function moveBtn(direction) {
 
 darkModeBtn.addEventListener("click", function () {
     if (darkModeOn) {
+        animationActive = true;
         moveBtn("left")
         toLightMode();
         darkModeOn = false;
@@ -119,7 +121,9 @@ darkModeBtn.addEventListener("click", function () {
         document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
+        animationActive = false;
     } else {
+        animationActive = true;
         moveBtn("right")
         toDarkMode();
         darkModeOn = true;
@@ -127,5 +131,6 @@ darkModeBtn.addEventListener("click", function () {
         document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
+        animationActive = false;
     }
 });
