@@ -7,7 +7,7 @@ for (let i = 0; i < cookies.length; i++) {
     if (cookies[i].split("=")[0] == "darkModeOn") {
         if (cookies[i].split("=")[1] == "true") {
             darkModeOn = true;
-            document.cookie = "darkModeOn=true; max-age" + 30 * 24 * 60 * 60 + "; path=/"
+            document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         } else if (cookies[i].split("=")[1] == "false") {
             darkModeOn = false;
             document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
@@ -121,7 +121,7 @@ darkModeBtn.addEventListener("click", function () {
         toDarkMode();
         darkModeOn = true;
         document.cookie = "darkModeOn=true";
-        document.cookie = "darkModeOn=true; max-age" + 30 * 24 * 60 * 60 + "; path=/"
+        document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
 
     }
 });
