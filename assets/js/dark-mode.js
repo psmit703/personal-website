@@ -1,4 +1,5 @@
 darkModeBtn = document.getElementById("btn-circle");
+darkModeBtnWrapper = document.getElementById("dark-mode-btn");
 slider = document.getElementById("btn-circle");
 darkModeOn = false;
 
@@ -116,12 +117,15 @@ darkModeBtn.addEventListener("click", function () {
         darkModeOn = false;
         document.cookie = "darkModeOn=false";
         document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
+        darkModeBtnWrapper.style.opacity = "1"
+        darkModeBtnWrapper.style.visibility = "visible"
     } else {
         moveBtn("right")
         toDarkMode();
         darkModeOn = true;
         document.cookie = "darkModeOn=true";
         document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
-
+        darkModeBtnWrapper.style.opacity = "1"
+        darkModeBtnWrapper.style.visibility = "visible"
     }
 });
