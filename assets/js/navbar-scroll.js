@@ -3,6 +3,9 @@ let dropdown = document.getElementById("navbar-options");
 let darkModeWrapper = document.getElementById("dark-mode-btn");
 let darkModeWrapperVisible = true;
 
+let viewportWidth = document.documentElement.clientWidth
+let navWidth = document.defaultView.getComputedStyle(navbar).width
+
 let prevScrollPos = window.scrollY;
 
 let prevMouseY = undefined;
@@ -28,8 +31,11 @@ window.onscroll = function () {
         } else {
             if (dropdown.classList.contains("show") == false && mouseAtTop == false) {
                 navbar.style.top = "-100px";
-                darkModeWrapper.style.animation = "dark-mode-scroll-hidden 0.3s ease-in-out forwards";
-                darkModeWrapperVisible = false;
+
+                if (mouseX > viewportWidth * 0.15 || navWidth < 768) {
+                    darkModeWrapper.style.animation = "dark-mode-scroll-hidden 0.3s ease-in-out forwards";
+                    darkModeWrapperVisible = false;
+                }
             }
         }
         prevScrollPos = currentScrollPos;
@@ -40,14 +46,13 @@ window.onscroll = function () {
 
 window.onmousemove = function (event) {
     if (animationActive == false) {
-        let navWidth = document.defaultView.getComputedStyle(navbar).width
         navWidth = navWidth.substring(0, navWidth.length - 2)
         navWidth = parseInt(navWidth)
 
         if (navWidth >= 768) {
             mouseY = event.clientY
             mouseX = event.clientX
-            let viewportWidth = document.documentElement.clientWidth
+
             if (prevMouseY == undefined) {
                 prevMouseY = mouseY;
             }
