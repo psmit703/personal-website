@@ -1,5 +1,6 @@
 let darkModeBtn = document.getElementById("btn-circle");
 let darkModeBtnWrapper = document.getElementById("dark-mode-btn");
+let deleteCookiesWrapper = document.getElementById("delete-cookies-wrapper");
 let slider = document.getElementById("btn-circle");
 let darkModeOn = false;
 let becauseCookie = false;
@@ -131,10 +132,10 @@ darkModeBtn.addEventListener("click", function () {
         animationActive = true;
         let scrollInit = window.scrollY;
         moveBtn("left")
+        document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
+        deleteCookiesWrapper.innerHTML = "<a href = \"#\" id = \"delete-cookies\">Delete All Cookies</a>"
         toLightMode();
         darkModeOn = false;
-        document.cookie = "darkModeOn=false";
-        document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
@@ -146,10 +147,10 @@ darkModeBtn.addEventListener("click", function () {
         animationActive = true;
         let scrollInit = window.scrollY;
         moveBtn("right")
+        document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
+        deleteCookiesWrapper.innerHTML = "<a href=\"#\" id=\"delete-cookies\" >Delete All Cookies</a>"
         toDarkMode();
         darkModeOn = true;
-        document.cookie = "darkModeOn=true";
-        document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
