@@ -77,10 +77,12 @@ function toDarkMode() {
         }
     }
 
-    technicalResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Technical).pdf";
-    technicalAnchor.href = technicalResumePath;
-    humanitiesResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Humanities).pdf";
-    humanitiesAnchor.href = humanitiesResumePath;
+    if (window.location.href.includes("resume.html")) {
+        technicalResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Technical).pdf";
+        technicalAnchor.href = technicalResumePath;
+        humanitiesResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Humanities).pdf";
+        humanitiesAnchor.href = humanitiesResumePath;
+    }
 }
 
 function toLightMode() {
@@ -123,10 +125,12 @@ function toLightMode() {
         }
     }
 
-    technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
-    technicalAnchor.href = technicalResumePath;
-    humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
-    humanitiesAnchor.href = humanitiesResumePath;
+    if (window.location.href.includes("resume.html")) {
+        technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
+        technicalAnchor.href = technicalResumePath;
+        humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
+        humanitiesAnchor.href = humanitiesResumePath;
+    }
 }
 
 
