@@ -63,6 +63,13 @@ function toDarkMode() {
     for (let i = 0; i < dividers.length; i++) {
         dividers[i].style.borderColor = "#888888"
     }
+
+    let anchors = document.getElementsByTagName("a");
+    for (let i = 0; i < anchors.length; i++) {
+        if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
+            anchors[i].style.color = "#009dff";
+        }
+    }
 }
 
 function toLightMode() {
@@ -97,7 +104,15 @@ function toLightMode() {
     for (let i = 0; i < dividers.length; i++) {
         dividers[i].style.borderColor = "rgba(0, 0, 0, 0.1)"
     }
+
+    let anchors = document.getElementsByTagName("a");
+    for (let i = 0; i < anchors.length; i++) {
+        if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
+            anchors[i].style.color = "#007bff";
+        }
+    }
 }
+
 
 function moveBtn(direction) {
     if (direction == "left") {
