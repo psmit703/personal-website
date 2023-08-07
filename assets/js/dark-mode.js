@@ -12,7 +12,7 @@ for (let i = 0; i < cookies.length; i++) {
             document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         } else if (cookies[i].split("=")[1] == "false") {
             darkModeOn = false;
-            document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
+            document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         } else {
             console.log("Error: invalid cookie value for darkModeOn in /assets/js/dark-mode.js");
         }
@@ -26,7 +26,7 @@ if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matc
     darkModeOn = true;
     slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
 
-    // update expiration date for cookie
+
 } else {
     slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
 }
@@ -113,7 +113,6 @@ function toLightMode() {
     }
 }
 
-
 function moveBtn(direction) {
     if (direction == "left") {
         slider.style.animation = "dark-mode-off 0.3s ease-in-out forwards";
@@ -134,7 +133,7 @@ darkModeBtn.addEventListener("click", function () {
         toLightMode();
         darkModeOn = false;
         document.cookie = "darkModeOn=false";
-        document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
+        document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         darkModeBtnWrapper.style.opacity = "1"
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
