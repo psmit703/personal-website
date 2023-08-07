@@ -3,10 +3,6 @@ let darkModeBtnWrapper = document.getElementById("dark-mode-btn");
 let slider = document.getElementById("btn-circle");
 let darkModeOn = false;
 let animationActive = false;
-let technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
-let technicalAnchor = document.getElementById("technical-download");
-let humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
-let humanitiesAnchor = document.getElementById("humanities-download");
 
 cookies = document.cookie.split("; ");
 for (let i = 0; i < cookies.length; i++) {
@@ -76,13 +72,6 @@ function toDarkMode() {
             anchors[i].style.color = "#009dff";
         }
     }
-
-    if (window.location.href.includes("resume.html")) {
-        technicalResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Technical).pdf";
-        technicalAnchor.href = technicalResumePath;
-        humanitiesResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Humanities).pdf";
-        humanitiesAnchor.href = humanitiesResumePath;
-    }
 }
 
 function toLightMode() {
@@ -123,13 +112,6 @@ function toLightMode() {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
             anchors[i].style.color = "#007bff";
         }
-    }
-
-    if (window.location.href.includes("resume.html")) {
-        technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
-        technicalAnchor.href = technicalResumePath;
-        humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
-        humanitiesAnchor.href = humanitiesResumePath;
     }
 }
 
