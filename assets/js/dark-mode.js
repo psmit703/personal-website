@@ -29,8 +29,6 @@ if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matc
     // update expiration date for cookie
 } else {
     slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
-    technicalAnchor.href = technicalResumePath;
-    humanitiesAnchor.href = humanitiesResumePath;
 }
 
 function toDarkMode() {
