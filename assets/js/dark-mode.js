@@ -2,6 +2,7 @@ let darkModeBtn = document.getElementById("btn-circle");
 let darkModeBtnWrapper = document.getElementById("dark-mode-btn");
 let slider = document.getElementById("btn-circle");
 let darkModeOn = false;
+let becauseCookie = false;
 let animationActive = false;
 
 cookies = document.cookie.split("; ");
@@ -12,6 +13,7 @@ for (let i = 0; i < cookies.length; i++) {
             document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         } else if (cookies[i].split("=")[1] == "false") {
             darkModeOn = false;
+            becauseCookie = true;
             document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         } else {
             console.log("Error: invalid cookie value for darkModeOn in /assets/js/dark-mode.js");
@@ -20,12 +22,11 @@ for (let i = 0; i < cookies.length; i++) {
 }
 
 // light mode is default
-if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || darkModeOn) {
+if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !becauseCookie)) {
     slider.style.marginLeft = "37px"
     toDarkMode();
     darkModeOn = true;
     slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
-
 
 } else {
     slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
