@@ -29,10 +29,13 @@
 
     <!-- navbar scroll script -->
     <script defer src="/assets/js/navbar-scroll.js"></script>
+
+    <!-- dark mode script -->
+    <script defer src="/assets/js/dark-mode.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="/">
                 <!-- NEED MORE SIZES FOR LOGO -->
@@ -64,6 +67,9 @@
         </div>
     </nav>
 
+    <div id="dark-mode-btn">
+        <input id="btn-circle" type="button"></input>
+    </div>
 
     <div class="container">
 
@@ -78,7 +84,7 @@
 
             <hr />
 
-            <footer class="footer text-muted text-center">
+            <footer class="footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="https://github.com/psmit703/personal-website">GitHub Repository</a> | <a
                         href="/privacy.html">Privacy

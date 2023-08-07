@@ -1,0 +1,181 @@
+let darkModeBtn = document.getElementById("btn-circle");
+let darkModeBtnWrapper = document.getElementById("dark-mode-btn");
+let slider = document.getElementById("btn-circle");
+let darkModeOn = false;
+let animationActive = false;
+let technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
+let technicalAnchor = document.getElementById("technical-download");
+let humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
+let humanitiesAnchor = document.getElementById("humanities-download");
+
+cookies = document.cookie.split("; ");
+for (let i = 0; i < cookies.length; i++) {
+    if (cookies[i].split("=")[0] == "darkModeOn") {
+        if (cookies[i].split("=")[1] == "true") {
+            darkModeOn = true;
+            document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
+        } else if (cookies[i].split("=")[1] == "false") {
+            darkModeOn = false;
+            document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
+        } else {
+            console.log("Error: invalid cookie value for darkModeOn in /assets/js/dark-mode.js");
+        }
+    }
+}
+
+// light mode is default
+if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || darkModeOn) {
+    slider.style.marginLeft = "37px"
+    toDarkMode();
+    darkModeOn = true;
+    slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
+
+    // update expiration date for cookie
+} else {
+    slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
+    technicalAnchor.href = technicalResumePath;
+    humanitiesAnchor.href = humanitiesResumePath;
+}
+
+function toDarkMode() {
+    navbar = document.getElementById("navbar");
+    navbar.classList.remove("navbar-light");
+    navbar.classList.remove("bg-light");
+    navbar.classList.add("navbar-dark");
+    navbar.classList.add("bg-dark");
+
+    document.body.classList.add("bg-dark");
+    document.body.classList.add("text-light");
+
+    document.getElementById("footer").classList.remove("text-muted");
+    document.getElementById("footer").classList.add("text-light");
+
+    let langSVGs = document.getElementsByClassName("langSVG");
+    for (let i = 0; i < langSVGs.length; i++) {
+        langSVGs[i].height = "90";
+        langSVGs[i].width = "90";
+        langSVGs[i].style.objectFit = "contain";
+        langSVGs[i].style.backgroundColor = "#888888";
+        langSVGs[i].style.padding = "10px";
+        langSVGs[i].style.borderRadius = "10px";
+    }
+
+    let contactSVGs = document.getElementsByClassName("contactSVG");
+    for (let i = 0; i < contactSVGs.length; i++) {
+        contactSVGs[i].style.color = "rgb(248, 249, 250)";
+    }
+
+    let dividers = document.getElementsByTagName("hr");
+    for (let i = 0; i < dividers.length; i++) {
+        dividers[i].style.borderColor = "#888888"
+    }
+
+    let anchors = document.getElementsByTagName("a");
+    for (let i = 0; i < anchors.length; i++) {
+        if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
+            anchors[i].style.color = "#009dff";
+        }
+    }
+
+    if (window.location.href.includes("resume.html")) {
+        technicalResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Technical).pdf";
+        technicalAnchor.href = technicalResumePath;
+        humanitiesResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Humanities).pdf";
+        humanitiesAnchor.href = humanitiesResumePath;
+    }
+}
+
+function toLightMode() {
+    navbar = document.getElementById("navbar");
+    navbar.classList.remove("navbar-dark");
+    navbar.classList.remove("bg-dark");
+    navbar.classList.add("navbar-light");
+    navbar.classList.add("bg-light");
+
+    document.body.classList.remove("bg-dark");
+    document.body.classList.remove("text-light");
+
+    document.getElementById("footer").classList.remove("text-light");
+    document.getElementById("footer").classList.add("text-muted");
+
+    let langSVGs = document.getElementsByClassName("langSVG");
+    for (let i = 0; i < langSVGs.length; i++) {
+        langSVGs[i].height = "70";
+        langSVGs[i].width = "70";
+        langSVGs[i].style.objectFit = "contain";
+        langSVGs[i].style.backgroundColor = "transparent";
+        langSVGs[i].style.padding = "0";
+        langSVGs[i].style.borderRadius = "0";
+    }
+
+    let contactSVGs = document.getElementsByClassName("contactSVG");
+    for (let i = 0; i < contactSVGs.length; i++) {
+        contactSVGs[i].style.color = "black";
+    }
+
+    let dividers = document.getElementsByTagName("hr");
+    for (let i = 0; i < dividers.length; i++) {
+        dividers[i].style.borderColor = "rgba(0, 0, 0, 0.1)"
+    }
+
+    let anchors = document.getElementsByTagName("a");
+    for (let i = 0; i < anchors.length; i++) {
+        if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
+            anchors[i].style.color = "#007bff";
+        }
+    }
+
+    if (window.location.href.includes("resume.html")) {
+        technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
+        technicalAnchor.href = technicalResumePath;
+        humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
+        humanitiesAnchor.href = humanitiesResumePath;
+    }
+}
+
+
+function moveBtn(direction) {
+    if (direction == "left") {
+        slider.style.animation = "dark-mode-off 0.3s ease-in-out forwards";
+        slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
+    } else if (direction == "right") {
+        slider.style.animation = "dark-mode-on 0.3s ease-in-out forwards";
+        slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
+    } else {
+        console.log("Error: moveBtn() called with invalid argument in /assets/js/dark-mode.js");
+    }
+}
+
+darkModeBtn.addEventListener("click", function () {
+    if (darkModeOn) {
+        animationActive = true;
+        let scrollInit = window.scrollY;
+        moveBtn("left")
+        toLightMode();
+        darkModeOn = false;
+        document.cookie = "darkModeOn=false";
+        document.cookie = "darkModeOn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"
+        darkModeBtnWrapper.style.opacity = "1"
+        darkModeBtnWrapper.style.visibility = "visible"
+        let scrollEnd = window.scrollY;
+
+        if (scrollInit == scrollEnd) {
+            animationActive = false;
+        }
+    } else {
+        animationActive = true;
+        let scrollInit = window.scrollY;
+        moveBtn("right")
+        toDarkMode();
+        darkModeOn = true;
+        document.cookie = "darkModeOn=true";
+        document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
+        darkModeBtnWrapper.style.opacity = "1"
+        darkModeBtnWrapper.style.visibility = "visible"
+        let scrollEnd = window.scrollY;
+
+        if (scrollInit == scrollEnd) {
+            animationActive = false;
+        }
+    }
+});
