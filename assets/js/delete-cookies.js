@@ -8,11 +8,12 @@ function displayDeleted(deleted) {
     } else if (deleted == false) {
         wrapper.innerHTML = "No Cookies Found!"
     } else {
-        wrapper.innerHTML = "An Error Occurred!"
+        wrapper.innerHTML = "An Error Occurred"
+        console.log("Error: displayDeleted() called with invalid argument ( " + deleted + " ) in /assets/js/delete-cookies.js");
     }
 }
 
-wrapper.addEventListener("click", function () {
+function delAllCookies() {
     let cookies = document.cookie.split("; ");
     let anyDeleted = false
 
@@ -27,4 +28,8 @@ wrapper.addEventListener("click", function () {
     }
 
     displayDeleted(anyDeleted);
-});
+}
+
+deleteCookies.addEventListener("click", function () {
+    delAllCookies()
+}, { once: true });

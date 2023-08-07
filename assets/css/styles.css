@@ -216,3 +216,15 @@ hr {
         visibility: hidden;
     }
 }
+
+#delete-cookies {
+    cursor: pointer;
+    color: #007bff;
+    width: 128.09px;
+    display: inline-block;
+}
+
+#delete-cookies:hover {
+    text-decoration: underline;
+    color: #0056b3
+}

@@ -72,6 +72,9 @@ function toDarkMode() {
             anchors[i].style.color = "#009dff";
         }
     }
+
+    let deleteCookies = document.getElementById("delete-cookies");
+    deleteCookies.style.color = "#009dff";
 }
 
 function toLightMode() {
@@ -113,6 +116,9 @@ function toLightMode() {
             anchors[i].style.color = "#007bff";
         }
     }
+
+    let deleteCookies = document.getElementById("delete-cookies");
+    deleteCookies.style.color = "#007bff";
 }
 
 function moveBtn(direction) {
@@ -133,7 +139,8 @@ darkModeBtn.addEventListener("click", function () {
         let scrollInit = window.scrollY;
         moveBtn("left")
         document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
-        deleteCookiesWrapper.innerHTML = "<a href = \"#\" id = \"delete-cookies\">Delete All Cookies</a>"
+        deleteCookiesWrapper.innerHTML = "<span id=\"delete-cookies\">Delete All Cookies</span>"
+        deleteCookies = document.getElementById("delete-cookies");
         toLightMode();
         darkModeOn = false;
         darkModeBtnWrapper.style.opacity = "1"
@@ -143,12 +150,17 @@ darkModeBtn.addEventListener("click", function () {
         if (scrollInit == scrollEnd) {
             animationActive = false;
         }
+
+        deleteCookies.addEventListener("click", function () {
+            delAllCookies()
+        }, { once: true });
     } else {
         animationActive = true;
         let scrollInit = window.scrollY;
         moveBtn("right")
         document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
-        deleteCookiesWrapper.innerHTML = "<a href=\"#\" id=\"delete-cookies\" >Delete All Cookies</a>"
+        deleteCookiesWrapper.innerHTML = "<span id=\"delete-cookies\">Delete All Cookies</span>"
+        deleteCookies = document.getElementById("delete-cookies");
         toDarkMode();
         darkModeOn = true;
         darkModeBtnWrapper.style.opacity = "1"
@@ -158,5 +170,9 @@ darkModeBtn.addEventListener("click", function () {
         if (scrollInit == scrollEnd) {
             animationActive = false;
         }
+
+        deleteCookies.addEventListener("click", function () {
+            delAllCookies()
+        }, { once: true });
     }
 });
