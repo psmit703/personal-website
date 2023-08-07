@@ -28,7 +28,8 @@ if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme
     toDarkMode();
     darkModeOn = true;
     slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
-
+    darkModeBtn.style.backgroundColor = "rgb(136, 136, 136)";
+    darkModeBtnWrapper.style.backgroundColor = "rgb(136, 136, 136)";
 } else {
     slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
 }
@@ -125,9 +126,13 @@ function moveBtn(direction) {
     if (direction == "left") {
         slider.style.animation = "dark-mode-off 0.3s ease-in-out forwards";
         slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
+        darkModeBtnWrapper.style.animation = "dark-mode-wrapper-off 0.3s ease-in-out forwards";
+        darkModeBtnWrapper.style.backgroundColor = "lightblue";
     } else if (direction == "right") {
         slider.style.animation = "dark-mode-on 0.3s ease-in-out forwards";
         slider.style.backgroundImage = "url(/assets/images/dark-mode.svg)"
+        darkModeBtnWrapper.style.animation = "dark-mode-wrapper-on 0.3s ease-in-out forwards";
+        darkModeBtnWrapper.style.backgroundColor = "rgb(136, 136, 136)";
     } else {
         console.log("Error: moveBtn() called with invalid argument in /assets/js/dark-mode.js");
     }
