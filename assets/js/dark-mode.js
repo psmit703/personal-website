@@ -1,8 +1,12 @@
-darkModeBtn = document.getElementById("btn-circle");
-darkModeBtnWrapper = document.getElementById("dark-mode-btn");
-slider = document.getElementById("btn-circle");
-darkModeOn = false;
+let darkModeBtn = document.getElementById("btn-circle");
+let darkModeBtnWrapper = document.getElementById("dark-mode-btn");
+let slider = document.getElementById("btn-circle");
+let darkModeOn = false;
 let animationActive = false;
+let technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
+let technicalAnchor = document.getElementById("technical-download");
+let humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
+let humanitiesAnchor = document.getElementById("humanities-download");
 
 cookies = document.cookie.split("; ");
 for (let i = 0; i < cookies.length; i++) {
@@ -29,6 +33,8 @@ if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matc
     // update expiration date for cookie
 } else {
     slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
+    technicalAnchor.href = technicalResumePath;
+    humanitiesAnchor.href = humanitiesResumePath;
 }
 
 function toDarkMode() {
@@ -70,6 +76,11 @@ function toDarkMode() {
             anchors[i].style.color = "#009dff";
         }
     }
+
+    technicalResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Technical).pdf";
+    technicalAnchor.href = technicalResumePath;
+    humanitiesResumePath = "/assets/resumes/dark-mode/Pete_Smith_Resume_(Humanities).pdf";
+    humanitiesAnchor.href = humanitiesResumePath;
 }
 
 function toLightMode() {
@@ -111,6 +122,11 @@ function toLightMode() {
             anchors[i].style.color = "#007bff";
         }
     }
+
+    technicalResumePath = "/assets/resumes/Pete_Smith_Resume_(Technical).pdf";
+    technicalAnchor.href = technicalResumePath;
+    humanitiesResumePath = "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf";
+    humanitiesAnchor.href = humanitiesResumePath;
 }
 
 

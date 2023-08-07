@@ -27,6 +27,9 @@
 
     <!-- dark mode script -->
     <script defer src="/assets/js/dark-mode.js"></script>
+
+    <!-- Adobe PDF Embed API script -->
+    <script defer src="/assets/js/resumeDisplay.js"></script>
 </head>
 
 <body>
@@ -68,63 +71,27 @@
     <div class="container">
         <div class="body-content-custom">
 
-            <div class="card mx-auto">
+            <div class="card mx-auto bg-dark">
                 <h4 class="text-center" style="height: 45px; top: 50%; transform: translateY(25%);">
                     Technical Résumé |
-                    <a href="/assets/resumes/Pete_Smith_Resume_(Technical).pdf">Direct
+                    <a id="technical-download">Direct
                         Download</a>
                 </h4>
                 <div id="technical-resume-custom" style="height: 660px; margin: auto;"></div>
                 <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-                <script type="text/javascript">
-                    document.addEventListener("adobe_dc_view_sdk.ready", function () {
-                        var adobeDCView = new AdobeDC.View({ clientId: "b32827ef44d9406395e169bf3feca8c4", divId: "technical-resume-custom" });
-                        adobeDCView.previewFile(
-                            {
-                                content: { location: { url: "/assets/resumes/Pete_Smith_Resume_(Technical).pdf" } },
-                                metaData: { fileName: "Pete Smith Résumé (Technical)", hasReadOnlyAccess: true }
-                            },
-                            {
-                                embedMode: "IN_LINE",
-                                showFullScreen: true,
-                                showDownloadPDF: true,
-                                showPrintPDF: true
-                            }
-
-                        );
-                    });
-                </script>
                 <div style="height: 25px; margin: 8px 0 0;"></div>
             </div>
 
             <hr />
 
-            <div class="card mx-auto">
+            <div class="card mx-auto bg-dark">
                 <h4 class="text-center" style="height: 45px; top: 50%; transform: translateY(25%);">Humanities
                     Résumé |
-                    <a href="/assets/resumes/Pete_Smith_Resume_(Technical).pdf">Direct
+                    <a id="humanities-download">Direct
                         Download</a>
                 </h4>
                 <div id="humanities-resume-custom" style="height: 660px; margin: auto;"></div>
                 <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-                <script type="text/javascript">
-                    document.addEventListener("adobe_dc_view_sdk.ready", function () {
-                        var adobeDCView = new AdobeDC.View({ clientId: "b32827ef44d9406395e169bf3feca8c4", divId: "humanities-resume-custom" });
-                        adobeDCView.previewFile(
-                            {
-                                content: { location: { url: "/assets/resumes/Pete_Smith_Resume_(Humanities).pdf" } },
-                                metaData: { fileName: "Pete Smith Résumé (Humanities)", hasReadOnlyAccess: true }
-                            },
-                            {
-                                embedMode: "IN_LINE",
-                                showFullScreen: true,
-                                showDownloadPDF: true,
-                                showPrintPDF: true
-                            }
-
-                        );
-                    });
-                </script>
                 <div style="height: 25px; margin: 8px 0 0;"></div>
             </div>
 
