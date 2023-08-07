@@ -76,6 +76,10 @@ function toDarkMode() {
 
     let deleteCookies = document.getElementById("delete-cookies");
     deleteCookies.style.color = "#009dff";
+
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
 }
 
 function toLightMode() {
@@ -120,6 +124,10 @@ function toLightMode() {
 
     let deleteCookies = document.getElementById("delete-cookies");
     deleteCookies.style.color = "#007bff";
+
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
 }
 
 function moveBtn(direction) {
