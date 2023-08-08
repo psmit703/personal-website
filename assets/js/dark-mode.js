@@ -146,7 +146,7 @@ function moveBtn(direction) {
     }
 }
 
-darkModeBtn.addEventListener("click", function () {
+darkModeBtnWrapper.addEventListener("click", function () {
     if (darkModeOn) {
         animationActive = true;
         let scrollInit = window.scrollY;

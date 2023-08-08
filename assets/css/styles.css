@@ -156,6 +156,7 @@ hr {
     border-width: 3px;
     border-style: solid;
     border-color: black;
+    cursor: pointer;
 }
 
 #btn-circle {
