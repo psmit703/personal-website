@@ -152,7 +152,7 @@ darkModeBtnWrapper.addEventListener("click", function () {
         let scrollInit = window.scrollY;
         moveBtn("left")
         document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
-        deleteCookiesWrapper.innerHTML = "<span id=\"delete-cookies\">Delete All Cookies</span>"
+        deleteCookiesWrapper.innerHTML = "<span id=\"delete-cookies\">Reset Dark Mode Preference</span>"
         deleteCookies = document.getElementById("delete-cookies");
         toLightMode();
         darkModeOn = false;
@@ -172,7 +172,7 @@ darkModeBtnWrapper.addEventListener("click", function () {
         let scrollInit = window.scrollY;
         moveBtn("right")
         document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
-        deleteCookiesWrapper.innerHTML = "<span id=\"delete-cookies\">Delete All Cookies</span>"
+        deleteCookiesWrapper.innerHTML = "<span id=\"delete-cookies\">Reset Dark Mode Preference</span>"
         deleteCookies = document.getElementById("delete-cookies");
         toDarkMode();
         darkModeOn = true;
