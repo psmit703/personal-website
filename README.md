@@ -15,32 +15,42 @@ This is a general overview of technologies (except HTML and CSS) found in or oth
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
     * Bootstrap is a free, open-source CSS framework that eases the frontend development process and allows for a high degree of responsiveness when viewing sites on different devices (e.g., computers, phones, etc.)
     * This site heavily utilizes Bootstrap for its stylization and responsiveness
-    * One of Bootstrap's main criticisms, that creating unique webpages with it is difficult, was addressed through a [custom CSS file](https://github.com/psmit703/personal-website/blob/main/assets/css/styles.css) on my part
+    * One of Bootstrap's main criticisms, that creating unique webpages with it is difficult, was addressed through a [custom CSS file](https://github.com/psmit703/personal-website/blob/main/assets/css/styles.css) on my part along with significant use of custom [JavaScript files](https://github.com/psmit703/personal-website/tree/main/assets/js)
     * This site specifically uses Bootstrap 4.3.1
 * [GitHub Pages](https://pages.github.com/)
     * GitHub Pages is a service offered by GitHub that allows people to host sites for free in a secure and relatively simple way
     * This site is hosted by GitHub pages in the [main branch of this repository](https://github.com/psmit703/personal-website/tree/main)
     * GitHub Pages' configuration settings were also used as part of the DNS configuration and securty certificate process
-* [Google Search Console](https://search.google.com/search-console/about) | [Bing Search Console](https://www.bing.com/webmasters/about)
-    * Google Search Console and Bing Search Console are developer tools for their respective search engines
+* [Google Search Console](https://search.google.com/search-console/about) | [Bing Webmaster Tools](https://www.bing.com/webmasters/about)
+    * Google Search Console and Bing Webmaster Tools are developer tools for their respective search engines
     * They allow for indexing sites in their search engines, among other related features
     * This site is configured for both services
-    * This does not in any way affect the user and no related data is loaded while using the site
-* [IndexNow](https://www.indexnow.org/)
-    * IndexNow is an API that is used to make site updates known to search engines
-    * This site is configured for IndexNow
-    * This is not loaded in any way by a user while visiting pages on the site
-        * The one exception is if a user directly access the API key file's URL
-        * In this case, a .txt file is loaded by the user's browser and nothing else    
+    * This does not in any way affect the user and no related data is loaded while using the site 
 * [Navbar Menu Button JavaScript File](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-button.js)
     * This is a script that I wrote that is present on every page of the site
     * Its purpose is to rotate/unrotate the navbar menu button when it is toggled
     * It detects when the navbar menu button is clicked, and, depending on its current state, either rotates it clockwise or counter-clockwise
     * This is only visible when the site is used in its mobile format, however the script is loaded regardless
-* [Navbar Scrolling JavaScript File](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-scroll.js)
-    * This is a script that I wrote that is present on every page of the site
-    * Its purpose is to make the navigation bar either visible or invisible via CSS animations
-    * Triggering an animation is dependent on scrolling and mouse position
+* [JavaScript](https://github.com/psmit703/personal-website/tree/main/assets/js)
+    * This site uses several JavaScript files to achieve desired functionality
+    * This section will only cover JavaScript files that are present on all/most pages; files that are only used by one page will be described in their respective sections
+    * Dark Mode
+        * This site features a toggleable dark mode
+        * Dark mode is, by default, synced with the user's device settings
+        * This feature uses a cookie, which is set to automatically expire after 30 days, to remember the user's preference if a preference is manually chosen
+        * There is also an option at the bottom of each page to delete this cookie, thereby removing the saved preference
+        * The cookie is used sitewide; similarly, deleting the cookie removes the user's dark mode preference for the entire site
+    * Navbar Button
+        * This is only visible in mobile format
+        * When the navbar menu button is clicked/pressed, it rotates
+    * Scroll Animations
+        * When scrolling down, the navbar and dark mode toggle button disappear
+        * When scrolling back up (not necessarily to the top of the page), they reappear
+        * On desktop format, if the mouse is moved to the top of the screen, the navbar will reappear
+            * Similarly, if the mouse is moved to the left side of the screen, the dark mode toggle button will reappear
+            * If the user is not scrolled to the top of the page, then each will once again disappear when the mouse is moved away from these positions
+        * In mobile format, if the navbar menu is expanded, then neither the navbar nor the dark mode toggle button will disappear while scrolling down
+            * This only lasts while the navbar menu is expanded
 
 #### Home | [/index.html](https://github.com/psmit703/personal-website/blob/main/index.html)
 This is my site's home page; it can be accessed at either
@@ -67,22 +77,20 @@ This uses [Adobe's PDF Embed API](https://developer.adobe.com/document-services/
 
 
 #### Coding | [/coding.html](https://github.com/psmit703/personal-website/blob/main/coding.html)
-The coding page is where the various coding projects I have worked on are available. The page can be accessed at
+The coding page is where the various coding projects I have worked on will available. The page can be accessed at
 
     https://psmit.dev/coding.html
 
-and contains descriptions of each project. Some projects have options to view the code in their respective GitHub repositories, while others (specifically school-related projects) have options to contact me. Academic integrity guidelines prohibit me from making the code for each project publicly available, however recruiters, employers, etc. are welcome to contact me so that I can send copies privately.
-
-There are currently no projects listed that do not have publicly- or privately-available code. These may arise in the future based on employers' discretion and may either be temporary or permanent.
+There is no content yet.
 
 
 
 #### Writing | [/writing.html](https://github.com/psmit703/personal-website/blob/main/writing.html)
-The writing page is where all of my writing samples are and can be accessed at
+The writing page is where all of my writing samples will be and can be accessed at
 
     https://psmit.dev/writing.html
 
-This page contains various papers I have written for some of my History classes. I may also upload samples from other classes when I see fit, as well as samples from non-class related writing.
+There is no content yet.
 
 
 
@@ -91,7 +99,7 @@ This is my site's privacy policy. It can either be accessed at the bottom of eac
 
     https://psmit.dev/privacy.html
 
-While the code I have written does not collect data or otherwise raise concerns for any potential privacy infringements, the site uses several third party tools. As such and in the interest of transparency, this page contains disclaimers regarding privacy relating to these tools.
+While the code I have written does not collect data or otherwise raise concerns for any potential privacy infringements, the site uses several third party tools. As such and in the interest of transparency, this page contains notices regarding privacy relating to these tools.
 
 
 
