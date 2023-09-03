@@ -59,7 +59,7 @@ window.onmousemove = function (event) {
                 prevMouseX = mouseX;
             }
 
-            if (mouseY <= 124) {
+            if (mouseY <= 127) {
                 mouseAtTop = true;
             } else {
                 mouseAtTop = false;
