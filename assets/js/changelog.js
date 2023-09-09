@@ -23,7 +23,6 @@ let rspns = octokit.request('GET /repos/psmit703/personal-website/commits', {
 
 $.when(rspns).done(function (data) {
     let commits = data.data;
-    console.log(commits);
 
     for (let i = 0; i < commits.length && i < 10; i++) {
         let username = commits[i].author.login;
