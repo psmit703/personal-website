@@ -2,9 +2,11 @@ import { Octokit, App } from "https://esm.sh/octokit";
 
 let changelogContainer = document.getElementById("changelog-body");
 
-let preLogin = "<div class=\"card changelogs\"><div class=\"card-body\"><h5 class=\"card-title\">"
+let preUserURL = "<div class=\"card changelogs\"><div class=\"card-body\"><a class=\"user-link\" href=\""
+let preImg = "\">"
+let preLogin = "<h5 class=\"card-title\" style=\"vertical-align: middle; display: inline\">"
 let preName = " ("
-let preTime = ") | "
+let preTime = ")</a> | "
 let preDesc = "</h5><p class=\"card-text\">"
 let preLink = "</p><a href=\""
 let endTemplate = "\" class=\"btn btn-primary commit-link\">GitHub Commit Link</a></div></div>"
@@ -21,15 +23,18 @@ let rspns = octokit.request('GET /repos/psmit703/personal-website/commits', {
 
 $.when(rspns).done(function (data) {
     let commits = data.data;
+    console.log(commits);
 
     for (let i = 0; i < commits.length && i < 10; i++) {
         let username = commits[i].author.login;
         let actualName = commits[i].commit.author.name;
-        // let userPicture = commits[i].author.avatar_url;
+        let userPicture = commits[i].author.avatar_url;
         let commitMessage = commits[i].commit.message;
         let commitDateTime = commits[i].commit.author.date;
         let commitURL = commits[i].html_url;
+        let userURL = commits[i].author.html_url;
 
+        userPicture = "<img src=\"" + userPicture + "\" height=\"24px\" width=\"24px\" style=\"vertical-align: middle; border-radius: 4px; margin-right: 8px;\">"
 
         let year = commitDateTime.substring(0, 4);
         let month = commitDateTime.substring(5, 7);
@@ -41,7 +46,7 @@ $.when(rspns).done(function (data) {
         commitDateTime = new Date(month + "/" + day + "/" + year + " " + hour + ":" + minute + ":" + second + " UTC");
         let commitDateTimeString = commitDateTime.toLocaleString();
 
-        let template = preLogin + username + preName + actualName + preTime + commitDateTimeString + preDesc + commitMessage + preLink + commitURL + endTemplate;
+        let template = preUserURL + userURL + preImg + userPicture + preLogin + username + preName + actualName + preTime + commitDateTimeString + preDesc + commitMessage + preLink + commitURL + endTemplate;
 
         changelogContainer.innerHTML += template;
         if (i != commits.length - 1 && i != 9) {

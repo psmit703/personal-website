@@ -89,8 +89,10 @@ function toDarkMode() {
     let anchors = document.getElementsByTagName("a");
     for (let i = 0; i < anchors.length; i++) {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
-            if (!anchors[i].classList.contains("commit-link")) {
+            if (!anchors[i].classList.contains("commit-link") && !anchors[i].classList.contains("user-link")) {
                 anchors[i].style.color = "#009dff";
+            } else if (anchors[i].classList.contains("user-link")) {
+                anchors[i].style.color = "rgb(0, 86, 179)";
             }
         }
     }
@@ -145,8 +147,10 @@ function toLightMode() {
     let anchors = document.getElementsByTagName("a");
     for (let i = 0; i < anchors.length; i++) {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
-            if (!anchors[i].classList.contains("commit-link")) {
+            if (!anchors[i].classList.contains("commit-link") && !anchors[i].classList.contains("user-link")) {
                 anchors[i].style.color = "#007bff";
+            } else if (anchors[i].classList.contains("user-link")) {
+                anchors[i].style.color = "rgb(0, 123, 255)";
             }
         }
     }
