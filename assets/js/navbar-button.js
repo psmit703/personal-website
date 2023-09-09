@@ -26,10 +26,17 @@ navBtn.addEventListener("click", function handleClick() {
 
 document.addEventListener("click", function handleClick(clickPos) {
     let yPos = clickPos.clientY;
+    let xPos = clickPos.clientX;
+    let darkModeBtnRect = darkModeBtnWrapper.getBoundingClientRect();
+    let insideRect = false;
+
+    if (yPos >= darkModeBtnRect.top && yPos <= darkModeBtnRect.bottom && xPos >= darkModeBtnRect.left && xPos <= darkModeBtnRect.right) {
+        insideRect = true;
+    }
 
     let navHeight = navBar.offsetHeight + parseInt(getComputedStyle(navBar).marginBottom);
 
-    if (yPos > navHeight && toggledOn) {
+    if (yPos > navHeight && toggledOn && !insideRect) {
         navBtn.click();
     }
 });
