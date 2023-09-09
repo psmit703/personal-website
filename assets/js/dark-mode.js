@@ -6,22 +6,24 @@ let darkModeOn = false;
 let becauseCookie = false;
 let animationActive = false;
 
-
-function callback(mutations) {
+function callback(mutations, observer) {
     if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !becauseCookie)) {
         toDarkMode();
     }
 
-    changelogObserver.disconnect();
+    observer.disconnect();
 }
 
-let changelogObserver = new MutationObserver(callback)
-let targetNode = document.getElementById("changelog-body");
-let observerOptions = {
-    childList: true
-}
+let url = window.location.href;
+if (url.includes("changelog.html")) {
+    let observer = new MutationObserver(callback)
+    let targetNode = document.getElementById("changelog-body");
+    let observerOptions = {
+        childList: true
+    }
 
-changelogObserver.observe(targetNode, observerOptions);
+    observer.observe(targetNode, observerOptions);
+}
 
 cookies = document.cookie.split("; ");
 for (let i = 0; i < cookies.length; i++) {
