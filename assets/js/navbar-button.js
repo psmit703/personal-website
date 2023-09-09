@@ -1,5 +1,6 @@
 let navBtn = document.getElementsByClassName("navbar-toggler")[0];
 let dropdownLinks = document.getElementsByClassName("nav-link");
+let navBar = document.getElementById("navbar");
 let ddLinkWidths = [];
 for (let i = 0; i < dropdownLinks.length; i++) {
     ddLinkWidths.push(dropdownLinks[i].style.width);
@@ -20,5 +21,15 @@ navBtn.addEventListener("click", function handleClick() {
         for (let i = 0; i < dropdownLinks.length; i++) {
             dropdownLinks[i].style.width = ddLinkWidths[i];
         }
+    }
+});
+
+document.addEventListener("click", function handleClick(clickPos) {
+    let yPos = clickPos.clientY;
+
+    let navHeight = navBar.offsetHeight + parseInt(getComputedStyle(navBar).marginBottom);
+
+    if (yPos > navHeight && toggledOn) {
+        navBtn.click();
     }
 });
