@@ -2,13 +2,13 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-    <title>Writing | Pete Smith</title>
+    <title>Changelog | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <meta name="description" content="My Writing Samples">
+    <meta name="description" content="Recent changes to my website">
     <meta name="author" content="Pete Smith">
 
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://www.psmit.dev/writing.html">
+    <link rel="canonical" href="https://www.psmit.dev/changelog.html">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -34,6 +34,9 @@
 
     <!-- navbar item text on left for mobile format script -->
     <script defer src="/assets/js/navbar-text-left-mobile.js"></script>
+
+    <!-- changelog/GitHub API script -->
+    <script defer type="module" src="/assets/js/changelog.js"></script>
 </head>
 
 <body>
@@ -54,8 +57,7 @@
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link nav-home-custom text-center" href="/">Home<span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link nav-home-custom text-center" href="/">Home</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link nav-resume-custom text-center" href="/resume.html">Résumé</a>
@@ -63,8 +65,8 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link nav-coding-custom text-center" href="/coding.html">Coding Projects</a>
                     </li>
-                    <li class="nav-item mx-2 active active-custom">
-                        <a class="nav-link nav-writing-custom text-center" href="#">Writing Samples</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link nav-writing-custom text-center" href="/writing.html">Writing Samples</a>
                     </li>
                 </ul>
             </div>
@@ -72,17 +74,26 @@
     </nav>
 
     <div class="container">
+
         <div class="body-content-custom">
-            <h1 class="text-center">Coming soon!</h1>
 
+            <h3 class="text-center">Click <a href="https://github.com/psmit703/personal-website/commits">here</a>
+                to see all changes</h3>
 
+            <hr />
+
+            <h3 class="text-center">10 most recent changes</h3>
+
+            <div class="commit-spacing"></div>
+
+            <div id="changelog-body">
+            </div>
 
             <hr />
             <footer class="footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="https://github.com/psmit703/personal-website">GitHub Repository</a> | <a
-                        href="/changelog.html">Changelog</a> | <a href="/privacy.html">Privacy
-                        Notice</a></p>
+                        href="#">Changelog</a> | <a href="/privacy.html">Privacy Notice</a></p>
                 <p id="delete-cookies-wrapper"><span id="delete-cookies">Reset Dark Mode Preference</span></p>
             </footer>
         </div>

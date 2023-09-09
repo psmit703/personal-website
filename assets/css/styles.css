@@ -259,3 +259,7 @@ hr {
     text-decoration: underline;
     color: #0056b3
 }
+
+.commit-spacing {
+    margin: 40px 0 40px;
+}

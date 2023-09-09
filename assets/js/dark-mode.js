@@ -6,6 +6,23 @@ let darkModeOn = false;
 let becauseCookie = false;
 let animationActive = false;
 
+
+function callback(mutations) {
+    if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !becauseCookie)) {
+        toDarkMode();
+    }
+
+    changelogObserver.disconnect();
+}
+
+let changelogObserver = new MutationObserver(callback)
+let targetNode = document.getElementById("changelog-body");
+let observerOptions = {
+    childList: true
+}
+
+changelogObserver.observe(targetNode, observerOptions);
+
 cookies = document.cookie.split("; ");
 for (let i = 0; i < cookies.length; i++) {
     if (cookies[i].split("=")[0] == "darkModeOn") {
@@ -70,7 +87,9 @@ function toDarkMode() {
     let anchors = document.getElementsByTagName("a");
     for (let i = 0; i < anchors.length; i++) {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
-            anchors[i].style.color = "#009dff";
+            if (!anchors[i].classList.contains("commit-link")) {
+                anchors[i].style.color = "#009dff";
+            }
         }
     }
 
@@ -79,6 +98,12 @@ function toDarkMode() {
 
     if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
         window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    let changelogs = document.getElementsByClassName("changelogs");
+    for (let i = 0; i < changelogs.length; i++) {
+        changelogs[i].style.backgroundColor = "rgb(136, 136, 136)";
+        changelogs[i].style.color = "rgb(248, 249, 250)";
     }
 }
 
@@ -118,7 +143,9 @@ function toLightMode() {
     let anchors = document.getElementsByTagName("a");
     for (let i = 0; i < anchors.length; i++) {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
-            anchors[i].style.color = "#007bff";
+            if (!anchors[i].classList.contains("commit-link")) {
+                anchors[i].style.color = "#007bff";
+            }
         }
     }
 
@@ -127,6 +154,12 @@ function toLightMode() {
 
     if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
         window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    let changelogs = document.getElementsByClassName("changelogs");
+    for (let i = 0; i < changelogs.length; i++) {
+        changelogs[i].style.backgroundColor = "rgb(255, 255, 255)";
+        changelogs[i].style.color = "rgb(33, 37, 41)";
     }
 }
 
