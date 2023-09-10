@@ -1,3 +1,6 @@
+/* This file contains stylizations shared across each page of the site. */
+/* Please note that several of these stylizations are altered using JavaScript for various purposes. */
+
 /* stylizes logo in navbar */
 .nav-logo-custom {
     border-radius: 10px;
@@ -16,22 +19,25 @@
 }
 
 /* NEXT 4 - each specifies exact width for subpage name containers */
-/* necessary to stop bold text from changing width  */
+/* necessary to stop bold text from changing width */
 .nav-home-custom {
     width: 61.362px;
     padding: 8px;
 }
 
+/* ditto */
 .nav-resume-custom {
     width: 74.737px;
     padding: 8px;
 }
 
+/* ditto */
 .nav-coding-custom {
     width: 134.250px;
     padding: 8px;
 }
 
+/* ditto */
 .nav-writing-custom {
     width: 140.238px;
     padding: 8px;
@@ -52,14 +58,7 @@ hr {
     margin: 40px 0 40px;
 }
 
-/* stylizes cards for resume subpage */
-.card-custom {
-    width: 400px;
-    background-color: #f8f9fa;
-    border-radius: 20px;
-    margin: 0 0 40px;
-}
-
+/* stylizes "Hi! I'm Pete Smith" on the home page */
 .intro-custom {
     font-size: 40px;
     width: 400px;
@@ -78,11 +77,6 @@ hr {
     color: black;
 }
 
-/* adds space in between download icon and the word "Download" */
-.download-custom {
-    margin-right: 10px;
-}
-
 /* adds vertical space for GitHub, LinkedIn, and email address for smaller screens */
 /* centers each */
 .col-custom {
@@ -90,35 +84,33 @@ hr {
     text-align: center;
 }
 
-.langs-custom {
-    font-weight: bold;
-}
-
-.card-custom {
-    width: 800px;
-}
-
+/* stylizes header of 404 page */
 .header-404-custom {
     font-size: 40px;
     margin: 0 0 25px
 }
 
+/* bolds the about me section on the home page */
 .quick-facts-custom {
     font-weight: bold;
 }
 
+/* makes cards more rounded */
 .card {
     border-radius: 25px;
 }
 
+/* removes border from navbar toggle button */
 .navbar-toggler {
     border-color: transparent !important;
 }
 
+/* removes focus outline from navbar toggle button */
 .navbar-toggler:focus {
     outline: none;
 }
 
+/* navbar button toggle rotation animation */
 @keyframes nav-rot-on {
     from {
         transform: rotate(0deg);
@@ -129,6 +121,7 @@ hr {
     }
 }
 
+/* navbar button toggle rotation animation */
 @keyframes nav-rot-off {
     from {
         transform: rotate(90deg);
@@ -139,11 +132,13 @@ hr {
     }
 }
 
+/* navbar positioning and animation */
 .navbar {
     top: 0;
     transition: top 0.3s ease-in-out;
 }
 
+/* dark mode button wrapper initial stylization */
 #dark-mode-btn {
     position: sticky;
     top: 87.5%;
@@ -159,6 +154,7 @@ hr {
     cursor: pointer;
 }
 
+/* dark mode button initial stylization */
 #btn-circle {
     height: 34px;
     width: 34px;
@@ -177,6 +173,8 @@ hr {
     background-color: yellow;
 }
 
+/* dark mode button animation */
+/* alters position, background color, and background image */
 @keyframes dark-mode-on {
     from {
         margin-left: 3px;
@@ -191,6 +189,8 @@ hr {
     }
 }
 
+/* dark mode button animation */
+/* alters position, background color, and background image */
 @keyframes dark-mode-off {
     from {
         margin-left: 37px;
@@ -205,6 +205,8 @@ hr {
     }
 }
 
+/* dark mode button wrapper animation */
+/* alters background color */
 @keyframes dark-mode-wrapper-on {
     from {
         background-color: lightblue;
@@ -215,6 +217,8 @@ hr {
     }
 }
 
+/* dark mode button wrapper animation */
+/* alters background color */
 @keyframes dark-mode-wrapper-off {
     from {
         background-color: rgb(136, 136, 136);
@@ -225,6 +229,8 @@ hr {
     }
 }
 
+/* dark mode button wrapper animation */
+/* handles visibility */
 @keyframes dark-mode-scroll-visible {
     from {
         opacity: 0;
@@ -237,6 +243,8 @@ hr {
     }
 }
 
+/* dark mode button wrapper animation */
+/* handles visibility */
 @keyframes dark-mode-scroll-hidden {
     from {
         opacity: 1;
@@ -249,17 +257,20 @@ hr {
     }
 }
 
+/* stylizes option to delete dark mode preference */
 #delete-cookies {
     cursor: pointer;
     color: #007bff;
     display: inline-block;
 }
 
+/* stylizes option to delete dark mode preference when hovered */
 #delete-cookies:hover {
     text-decoration: underline;
     color: #0056b3
 }
 
+/* adds spacing between changelog cards */
 .commit-spacing {
     margin: 40px 0 40px;
 }
