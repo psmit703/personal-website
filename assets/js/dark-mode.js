@@ -109,6 +109,8 @@ function toDarkMode() {
         changelogs[i].style.backgroundColor = "rgb(136, 136, 136)";
         changelogs[i].style.color = "rgb(248, 249, 250)";
     }
+
+    darkModeBtn.style.backgroundPosition = "35% 65%";
 }
 
 function toLightMode() {
@@ -167,6 +169,9 @@ function toLightMode() {
         changelogs[i].style.backgroundColor = "rgb(255, 255, 255)";
         changelogs[i].style.color = "rgb(33, 37, 41)";
     }
+
+    darkModeBtn.style.backgroundPosition = "center";
+
 }
 
 function moveBtn(direction) {
