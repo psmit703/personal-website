@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
+<!-- if using this as a template for a new page, be sure to edit the following -->
+<!-- 1. head -->
+<!-- a. title -->
+<!-- b. description -->
+<!-- c. canonical link -->
+<!-- d. page-specific script tags -->
+<!-- 2. body -->
+<!-- a. navbar -->
+<!-- i. navbar links, including for the navbar title -->
+<!-- ii. active page -->
+<!-- iii. screen reader tags -->
+<!-- b. container -->
+<!-- i. should probably remove all container content, but use discretion -->
+<!-- c. footer -->
+<!-- i. footer links -->
+
 <head>
     <title>Résumé | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -43,20 +59,24 @@
 </head>
 
 <body>
+    <!-- dark mode toggle button -->
     <div id="dark-mode-btn">
         <input id="btn-circle" type="button"></input>
     </div>
 
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="/">Pete Smith
             </a>
 
+            <!-- navbar toggle button - only visible in mobile format -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options"
                 aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-2">
@@ -80,14 +100,14 @@
     <div class="container">
         <div class="body-content-custom">
 
+            <!-- title and download link for technical resume -->
             <h3 class="text-center" style="height: 75px; top: 50%; transform: translateY(25%);">
-                Technical Résumé<br><a href="/assets/resumes/Pete_Smith_Resume_(Technical).pdf">Direct
-                    Download</a>
+                Technical Résumé<br><a href="/assets/resumes/Pete_Smith_Resume_(Technical).pdf">Download</a>
             </h3>
-
 
             <hr style="opacity: 0; margin: 20px 0 20px" />
 
+            <!-- begin technical resume -->
             <h3 class="text-center">Pete Smith</h3>
             <p class="text-center">(443) 254-2441 | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a> |
                 Washington, D.C. Area</p>
@@ -162,17 +182,18 @@
                         databases using HTTP requests and a PostgreSQL Python library</li>
                 </ul>
             </ul>
-
+            <!-- end technical resume -->
 
             <hr />
 
+            <!-- title and download link for humanities resume -->
             <h3 class="text-center" style="height: 75px; top: 50%; transform: translateY(25%);">Humanities
-                Résumé<br><a href="/assets/resumes/Pete_Smith_Resume_(Humanities).pdf">Direct
-                    Download</a>
+                Résumé<br><a href="/assets/resumes/Pete_Smith_Resume_(Humanities).pdf">Download</a>
             </h3>
 
             <hr style="opacity: 0; margin: 20px 0 20px" />
 
+            <!-- begin humanities resume -->
             <h3 class="text-center">Pete Smith</h3>
             <p class="text-center">(443) 254-2441 | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a> |
                 Washington, D.C. Area | <a
@@ -253,11 +274,12 @@
                     <li>Required good teamwork and communication to ensure smooth operation</li>
                 </ul>
             </ul>
+            <!-- end humanities resume -->
 
             <hr />
 
+            <!-- footer -->
             <footer class="footer text-muted text-center" id="footer">
-
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="https://github.com/psmit703/personal-website">GitHub Repository</a> | <a
                         href="/changelog.html">Changelog</a> | <a href="/privacy.html">Privacy
@@ -266,7 +288,6 @@
             </footer>
         </div>
     </div>
-
 
     <!-- required for proper Bootstrap functionality -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -279,6 +300,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 
 </html>
