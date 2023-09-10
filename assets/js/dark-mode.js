@@ -1,3 +1,8 @@
+// This script handles dark mode functionality.
+// It starts by checking if the user has a dark mode cookie.
+// If not, it checks if the user's device is set to dark mode.
+// If there is a cookie, that overrides device preference. If there is no cookie, device preference is used.
+
 let darkModeBtn = document.getElementById("btn-circle");
 let darkModeBtnWrapper = document.getElementById("dark-mode-btn");
 let deleteCookiesWrapper = document.getElementById("delete-cookies-wrapper");
@@ -6,6 +11,7 @@ let darkModeOn = false;
 let becauseCookie = false;
 let animationActive = false;
 
+// this function is called when the GitHub API data for the changelog page is loaded
 function callback(mutations, observer) {
     if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !becauseCookie)) {
         toDarkMode();
@@ -14,6 +20,9 @@ function callback(mutations, observer) {
     observer.disconnect();
 }
 
+// checks if the user is on the changelog page
+// if so, supports dark mode preference for data received from the GitHub API
+// this data may be received after the rest of this script has already run, making this necessary
 let url = window.location.href;
 if (url.includes("changelog.html")) {
     let observer = new MutationObserver(callback)
@@ -25,13 +34,18 @@ if (url.includes("changelog.html")) {
     observer.observe(targetNode, observerOptions);
 }
 
+// checks if the user has a dark mode cookie
 cookies = document.cookie.split("; ");
 for (let i = 0; i < cookies.length; i++) {
     if (cookies[i].split("=")[0] == "darkModeOn") {
         if (cookies[i].split("=")[1] == "true") {
+            // dark mode is on
+            // update the cookie to expire in 30 days from the current date
             darkModeOn = true;
             document.cookie = "darkModeOn=true; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
         } else if (cookies[i].split("=")[1] == "false") {
+            // dark mode is off
+            // update the cookie to expire in 30 days from the current date
             darkModeOn = false;
             becauseCookie = true;
             document.cookie = "darkModeOn=false; max-age=" + 30 * 24 * 60 * 60 + "; path=/"
@@ -42,7 +56,11 @@ for (let i = 0; i < cookies.length; i++) {
 }
 
 // light mode is default
+// if the dark mode cookie exists and is true, or if the user's device is set to dark mode and the
+// dark mode cookie does not exist, dark mode will be enabled
 if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !becauseCookie)) {
+    // instantly moves the button to the right so that no animation is visible
+    // calls toDarkMode() to update the rest of the page
     slider.style.marginLeft = "37px"
     toDarkMode();
     darkModeOn = true;
@@ -53,6 +71,10 @@ if (darkModeOn || (window.matchMedia && window.matchMedia('(prefers-color-scheme
     slider.style.backgroundImage = "url(/assets/images/light-mode.svg)"
 }
 
+// called when dark mode is enabled
+// dark mode is sometimes done by adding a class to the body, however there is a lot going on in this site,
+// much of which requires JavaScript, (especially with respect to Bootstrap) and it is easier to just
+// manually change the relevant properties through JS
 function toDarkMode() {
     navbar = document.getElementById("navbar");
     navbar.classList.remove("navbar-light");
@@ -113,6 +135,8 @@ function toDarkMode() {
     darkModeBtn.style.backgroundPosition = "35% 65%";
 }
 
+// called when light mode is enabled
+// same idea as toDarkMode(), but for light mode instead of dark mode
 function toLightMode() {
     navbar = document.getElementById("navbar");
     navbar.classList.remove("navbar-dark");
@@ -174,6 +198,7 @@ function toLightMode() {
 
 }
 
+// animations to move the button when it is clicked
 function moveBtn(direction) {
     if (direction == "left") {
         slider.style.animation = "dark-mode-off 0.3s ease-in-out forwards";
@@ -190,6 +215,9 @@ function moveBtn(direction) {
     }
 }
 
+// event listener to detect clicking/pressing the dark mode button
+// allows for users to change light/dark mode without reloading the page
+// updates cookie to expire 30 days from the current date
 darkModeBtnWrapper.addEventListener("click", function () {
     if (darkModeOn) {
         animationActive = true;
@@ -204,12 +232,16 @@ darkModeBtnWrapper.addEventListener("click", function () {
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
 
+        // animationActive is used as a semaphore (also used in navbar-scroll.js)
+        // this prevents the page from moving vertically when the button is clicked due to the prog. lang. SVGs changing size
+        // in turn, this prevents the behaviors in navbar-scroll.js from being triggered unintentionally
         if (scrollInit == scrollEnd) {
             animationActive = false;
         }
 
+        // re-establishes an event listener to detect clicking/pressing the option to remove dark mode preference
         deleteCookies.addEventListener("click", function () {
-            delAllCookies()
+            delDarkModeCookie()
         }, { once: true });
     } else {
         animationActive = true;
@@ -224,12 +256,16 @@ darkModeBtnWrapper.addEventListener("click", function () {
         darkModeBtnWrapper.style.visibility = "visible"
         let scrollEnd = window.scrollY;
 
+        // animationActive is used as a semaphore (also used in navbar-scroll.js)
+        // this prevents the page from moving vertically when the button is clicked due to the prog. lang. SVGs changing size
+        // in turn, this prevents the behaviors in navbar-scroll.js from being triggered unintentionally
         if (scrollInit == scrollEnd) {
             animationActive = false;
         }
 
+        // re-establishes an event listener to detect clicking/pressing the option to remove dark mode preference
         deleteCookies.addEventListener("click", function () {
-            delAllCookies()
+            delDarkModeCookie()
         }, { once: true });
     }
 });
