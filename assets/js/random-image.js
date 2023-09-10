@@ -1,9 +1,9 @@
-viewWidth = window.innerWidth;
-viewHeight = window.innerHeight;
+let imgWrapper = document.getElementById("img-parent");
+let imgDiv = document.getElementById('random-image');
+let viewWidth = window.innerWidth;
+let viewHeight = window.innerHeight;
 
-if (viewWidth / viewHeight < 1000 / 720) {
-    document.getElementById("img-parent").remove();
-} else {
+function setPicture(elmt) {
     rand = Math.floor(Math.random() * 5) + 1;
 
     pictDir = "/assets/images/random-image/image" + rand + ".jpg";
@@ -20,7 +20,34 @@ if (viewWidth / viewHeight < 1000 / 720) {
         altText = "Me standing with the Baltimore Orioles' mascot during a postseason game"
     }
 
-    ele = document.getElementById('random-image');
-    ele.src = pictDir;
-    ele.alt = altText;
+    elmt.src = pictDir;
+    elmt.alt = altText;
 }
+
+if (viewWidth / viewHeight < 1000 / 720) {
+    imgWrapper.style.opacity = "0";
+    imgWrapper.style.visibility = "0";
+    imgWrapper.style.display = "none";
+} else {
+    setPicture(imgDiv);
+}
+
+addEventListener("resize", (event) => {
+    viewWidth = window.innerWidth;
+    viewHeight = window.innerHeight;
+
+    if (viewWidth / viewHeight < 1000 / 720) {
+        imgWrapper.style.opacity = "0";
+        imgWrapper.style.visibility = "0";
+        imgWrapper.style.display = "none";
+    } else {
+        if (imgDiv.src == "") {
+            setPicture(imgDiv);
+        }
+        imgWrapper.style.opacity = "1";
+        imgWrapper.style.visibility = "1";
+        imgWrapper.style.display = "block";
+    }
+
+
+});
