@@ -13,7 +13,7 @@ function displayDeleted(deleted) {
     }
 }
 
-function delAllCookies() {
+function delDarkModeCookie() {
     let cookies = document.cookie.split("; ");
     let anyDeleted = false
 
@@ -25,6 +25,7 @@ function delAllCookies() {
                 document.cookie = name + "=" + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 
                 anyDeleted = true;
+                break;
             }
         }
     }
@@ -33,5 +34,5 @@ function delAllCookies() {
 }
 
 deleteCookies.addEventListener("click", function () {
-    delAllCookies()
+    delDarkModeCookie()
 }, { once: true });
