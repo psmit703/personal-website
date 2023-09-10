@@ -17,6 +17,10 @@ This is a general overview of technologies (except HTML and CSS) found in or oth
     * This site heavily utilizes Bootstrap for its stylization and responsiveness
     * One of Bootstrap's main criticisms, that creating unique webpages with it is difficult, was addressed through a [custom CSS file](https://github.com/psmit703/personal-website/blob/main/assets/css/styles.css) on my part along with significant use of custom [JavaScript files](https://github.com/psmit703/personal-website/tree/main/assets/js)
     * This site specifically uses Bootstrap 4.3.1
+* [Plausible Analytics](https://plausible.io/)
+    * Plausible Analytics is a privacy-friendly alternative to Google Analytics and is GDPR, CCPA, and PECR compliant
+    * Plausible is in this site to track various metrics including view counts and city-level location data
+    * No personally-identifiable data is collected, stored, or otherwise used by Plausible
 * [GitHub Pages](https://pages.github.com/)
     * GitHub Pages is a service offered by GitHub that allows people to host sites for free in a secure and relatively simple way
     * This site is hosted by GitHub pages in the [main branch of this repository](https://github.com/psmit703/personal-website/tree/main)
@@ -24,26 +28,23 @@ This is a general overview of technologies (except HTML and CSS) found in or oth
 * [Google Search Console](https://search.google.com/search-console/about) | [Bing Webmaster Tools](https://www.bing.com/webmasters/about)
     * Google Search Console and Bing Webmaster Tools are developer tools for their respective search engines
     * They allow for indexing sites in their search engines, among other related features
-    * This site is configured for both services
+    * This site is configured for both services, although the site will not appear in either search engine per the configuration settings I have selected
     * This does not in any way affect the user and no related data is loaded while using the site 
-* [Navbar Menu Button JavaScript File](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-button.js)
-    * This is a script that I wrote that is present on every page of the site
-    * Its purpose is to rotate/unrotate the navbar menu button when it is toggled
-    * It detects when the navbar menu button is clicked, and, depending on its current state, either rotates it clockwise or counter-clockwise
-    * This is only visible when the site is used in its mobile format, however the script is loaded regardless
 * [JavaScript](https://github.com/psmit703/personal-website/tree/main/assets/js)
     * This site uses several JavaScript files to achieve desired functionality
     * This section will only cover JavaScript files that are present on all/most pages; files that are only used by one page will be described in their respective sections
-    * Dark Mode
+    * [Dark Mode](https://github.com/psmit703/personal-website/blob/main/assets/js/dark-mode.js)
         * This site features a toggleable dark mode
         * Dark mode is, by default, synced with the user's device settings
         * This feature uses a cookie, which is set to automatically expire after 30 days, to remember the user's preference if a preference is manually chosen
         * There is also an option at the bottom of each page to delete this cookie, thereby removing the saved preference
-        * The cookie is used sitewide; similarly, deleting the cookie removes the user's dark mode preference for the entire site
-    * Navbar Button
+            * This is handled by a [separate, related file](https://github.com/psmit703/personal-website/blob/main/assets/js/delete-cookies.js)
+        * The cookie is used sitewide; as such, deleting the cookie removes the user's dark mode preference for the entire site
+    * [Navbar Button](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-button.js)
         * This is only visible in mobile format
         * When the navbar menu button is clicked/pressed, it rotates
-    * Scroll Animations
+        * Additionally, this file handles minimizing the navbar menu if the user clicks/presses outside of the navbar menu while in mobile format
+    * [Scroll Animations](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-scroll.js)
         * When scrolling down, the navbar and dark mode toggle button disappear
         * When scrolling back up (not necessarily to the top of the page), they reappear
         * On desktop format, if the mouse is moved to the top of the screen, the navbar will reappear
@@ -51,6 +52,12 @@ This is a general overview of technologies (except HTML and CSS) found in or oth
             * If the user is not scrolled to the top of the page, then each will once again disappear when the mouse is moved away from these positions
         * In mobile format, if the navbar menu is expanded, then neither the navbar nor the dark mode toggle button will disappear while scrolling down
             * This only lasts while the navbar menu is expanded
+    * [Left-Aligned Navbar Menu Text](https://github.com/psmit703/personal-website/blob/main/assets/js/navbar-text-left-mobile.js)
+        * This is only visible in mobile format
+        * Ordinally, the navbar menu options are center-aligned in their respective HTML elements
+            * This is to make the bold effect on the active page expand to both the left and the right, rather than just the right
+        * When viewed in mobile format, JavaScript is used to left-align the navbar options
+            * Otherwise, they will be centered relative to the screen
 
 #### Home | [/index.html](https://github.com/psmit703/personal-website/blob/main/index.html)
 This is my site's home page; it can be accessed at either
@@ -72,7 +79,7 @@ This page displays both my technical and humanities résumés and can be accesse
 
     https://psmit.dev/resume.html
 
-This uses [Adobe's PDF Embed API](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api/) to render both my technical and humanities résumés, which are stored in .pdf format. While the embeded documents have their own options to download each PDF, I have also included separate links for downloading the PDFs on the off chance that Adobe's service is not working.
+Both résumés are displayed in plain text, with links above each to download PDF versions.
 
 
 
@@ -91,6 +98,15 @@ The writing page is where all of my writing samples will be and can be accessed 
     https://psmit.dev/writing.html
 
 There is no content yet.
+
+
+
+#### Changelog | [/changelog.html](https://github.com/psmit703/personal-website/blob/main/changelog.html)
+This page displays the 10 most recent changes to the site and can be accessed at
+
+    https://psmit.dev/changelog.html
+
+This uses a [custom JavaScript file](https://github.com/psmit703/personal-website/blob/main/assets/js/changelog.js) to interact with GitHub's REST API. The custom JavaScript file in turn uses [Octokit.js](https://github.com/octokit/octokit.js), which is maintained by GitHub. This allows the most recent commits to be retrieved, which are then displayed on the page. The page also contains a link to view all changes to the site.
 
 
 

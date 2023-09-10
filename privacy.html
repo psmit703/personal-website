@@ -84,19 +84,29 @@
                     href="https://github.com/psmit703/personal-website/tree/main">github.com/<wbr>psmit703/<wbr>personal-website/<wbr>tree/<Wbr>main</a>
                 ) makes limited use of non-identifiable information:
             <ul>
-                <li>The <a href="https://www.psmit.dev">Home Page</a> uses JavaScript to determine the height and width
+                <li>The <a href="/">Home Page</a> uses JavaScript to determine the height and width
                     (in pixels) of the
                     user's browser window in order to determine whether or not to display an image. If the aspect ratio
                     is too small, then no image is displayed. This is done to create, in my opinion, a better aesthetic
                     on mobile devices. All of the processing is done by the user's browser and nothing is stored or sent
                     back to me (Pete Smith) in any way.
                 </li>
-                <li>The <a href="https://www.psmit.dev/404.html">Error 404 Page</a> uses JavaScript to determine the URL
+                <li>The <a href="/changelog.html">Changelog Page</a> uses JavaScript to retrieve
+                    recent commits to the site's GitHub repository. It does this by interacting with GitHub's REST API
+                    through Octokit.js, which itself is maintained by GitHub and is GitHub's official way of interacting
+                    with their REST API. The code that I have written processes solely on the user's browser and nothing
+                    is stored or sent back to me (Pete Smith) in any way. However, as this interacts with GitHub's REST
+                    API, I cannot guarantee that anything related to data-privacy is true regarding GitHub. Please see
+                    GitHub's privacy policy ( <a
+                        href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">docs.github.com/<wbr>en/<wbr>site-policy/<wbr>privacy-policies/<wbr>github-privacy-statement</a>
+                    ) for more information.
+                </li>
+                <li>The <a href="/404.html">Error 404 Page</a> uses JavaScript to determine the URL
                     that a user has inputted. As this page is an error page, the URL is used in a message displayed to
                     the user. All of the processing is done by the user's browser and nothing is stored or sent back to
                     me (Pete Smith) in any way.
                 </li>
-                <li>Every page uses JavaScript for certain navigation bar animations. There are two scripts that control
+                <li>Every page uses JavaScript for certain navigation bar features. There are three scripts that control
                     this
                     behavior:
                     <ul>
@@ -107,13 +117,22 @@
                             All of the processing is done by the user's browser and nothing is stored or sent back to me
                             (Pete Smith) in any way.
                         </li>
-                        <li>The
-                            second script controls the navigation bar menu animation when the site is viewed in mobile
-                            format.
-                            This script uses JavaScript to determine whether or not a user has clicked (or pressed for
-                            touchscreens) the navigation bar menu icon. This is used to apply a CSS rotation animation
-                            to the menu icon. All of the processing is done by the user's browser and nothing is stored
+                        <li>The second script controls the navigation bar menu animation when the site is viewed in
+                            mobile format. This script uses JavaScript to determine whether or not a user has clicked
+                            (or pressed for touchscreens) the navigation bar menu icon. This is used to apply a CSS
+                            rotation animation to the menu icon. This script also controls whether or not a click/press
+                            will close the navbar menu in mobile format. If the navbar menu is open and the site is
+                            being viewed in mobile format, then clicking/pressing outside of the navbar menu will close
+                            the navbar menu. All of the processing is done by the user's browser and nothing is stored
                             or sent back to me (Pete Smith) in any way.
+                        </li>
+                        <li>The third script controls the text alignment of navbar items. The default state is
+                            center-alignment, which appears in desktop mode. This allows for the bold effect of the
+                            active page to expand both to the left and the right, rather than just the right. However,
+                            in mobile format, center-alignment would make it centered relative to the screen. As such,
+                            this script uses JavaScript to change the navbar items to left-aligned when the site is
+                            viewed in mobile format. All of the processing is done by the user's browser and nothing is
+                            stored or sent back to me (Pete Smith) in any way.
                         </li>
                     </ul>
                 </li>
@@ -125,17 +144,16 @@
                     nothing is sent back to me (Pete Smith) in any way.
                 </li>
             </ul>
-            Other than what has been previously stated on this page, the code I have written does not process, store,
-            or use any user data in any way and does not use
-            cookies.
-            However, this
+            Other than what has already been stated on this page, the code I have written does not process, store,
+            or use any user data in any way and does not use otherwise cookies. However, this
             site makes use of various third party
             software that may do so. The following are short summaries of relevant privacy statements and
             links to their respective privacy policies, where applicable:</p>
             <ul>
                 <li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a>
                     <ul>
-                        <li>Bootstrap does not appear to have a privacy policy, and I believe the service itself
+                        <li>Bootstrap does not appear to have a privacy policy, and, as far as I am aware, the service
+                            itself
                             does
                             not
                             collect or process user data</li>
@@ -176,10 +194,13 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="https://pages.github.com/">GitHub Pages</a>
+                <li><a href="https://pages.github.com/">GitHub Pages</a> | <a
+                        href="https://docs.github.com/en/rest?apiVersion=2022-11-28">GitHub REST API</a> | <a
+                        href="https://github.com/octokit/octokit.js">Octokit.js</a>
                     <ul>
                         <li>GitHub's full privacy policy is available at <a
-                                href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">docs.github.com/<wbr>en/<wbr>site-policy/<wbr>privacy-policies/<wbr>github-privacy-statement</a>
+                                href="
+                        https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">docs.github.com/<wbr>en/<wbr>site-policy/<wbr>privacy-policies/<wbr>github-privacy-statement</a>
                         </li>
                         <li>As of July 10, 2023, GitHub offers the following summary:
                             <ul>
@@ -196,8 +217,32 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>Note: Octokit.js is maintained by GitHub and is GitHub's official way of interacting with
+                            their
+                            REST API.</li>
                     </ul>
                 </li>
+                <li><a href="https://plausible.io/">Plausible Analytics</a>
+                    <ul>
+                        <li>Plausible's full privacy policy is available at <a
+                                href="https://plausible.io/privacy">plausible.io/<wbr>privacy</a></li>
+                        <li>Plausible's full data policy is available at <a
+                                href="https://plausible.io/data-policy">plausible.io/<wbr>data-policy</a></li>
+                        <li>Plausible is open-source and the code is available at <a
+                                href="https://github.com/plausible/analytics">github.com/<wbr>plausible/<wbr>analytics</a>
+                        </li>
+                        <li>Plausible is a privacy-friendly alternative to Google Analytics
+                            <ul>
+                                <li>Plausible is compliant with GDPR, CCPA, and PECR</li>
+                                <li>Plausible collects, processes, and stores limited, non-identifiable information that
+                                    allows for site administrators to track data such as view counts and city-level
+                                    location data</li>
+                                <li>Plausible does not use cookies</li>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
             </ul>
             </li>
             </ul>
