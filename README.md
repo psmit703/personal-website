@@ -19,8 +19,12 @@ This is a general overview of technologies (except HTML and CSS) found in or oth
     * This site specifically uses Bootstrap 4.3.1
 * [Plausible Analytics](https://plausible.io/)
     * Plausible Analytics is a privacy-friendly alternative to Google Analytics and is GDPR, CCPA, and PECR compliant
-    * Plausible is in this site to track various metrics including view counts and city-level location data
+    * Plausible is used in this site to track various metrics including view counts and city-level location data
     * No personally-identifiable data is collected, stored, or otherwise used by Plausible
+* [Clicky Website Analytics](https://clicky.com/)
+    * Clicky Website Analytics is a privacy-friendly alternative to Google Analytics and is GDPR compliant
+    * Clicky is used in this site to track the number of unique visitors and page views
+    * No personally-identifiable data is collected, stored, or otherwise used by Clicky
 * [GitHub Pages](https://pages.github.com/)
     * GitHub Pages is a service offered by GitHub that allows people to host sites for free in a secure and relatively simple way
     * This site is hosted by GitHub pages in the [main branch of this repository](https://github.com/psmit703/personal-website/tree/main)
