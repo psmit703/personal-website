@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
+<!-- if using this as a template for a new page, be sure to edit the following -->
+<!-- 1. head -->
+<!-- a. title -->
+<!-- b. description -->
+<!-- c. canonical link -->
+<!-- d. page-specific script tags -->
+<!-- 2. body -->
+<!-- a. navbar -->
+<!-- i. navbar links, including for the navbar title -->
+<!-- ii. active page -->
+<!-- iii. screen reader tags -->
+<!-- b. container -->
+<!-- i. should probably remove all container content, but use discretion -->
+<!-- c. footer -->
+<!-- i. footer links -->
+
 <head>
     <title>Privacy Notice | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -43,20 +59,24 @@
 </head>
 
 <body>
+    <!-- dark mode toggle button -->
     <div id="dark-mode-btn">
         <input id="btn-circle" type="button"></input>
     </div>
 
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="/">Pete Smith
             </a>
 
+            <!-- navbar toggle button - only visible in mobile format -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options"
                 aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-2">
@@ -80,10 +100,13 @@
 
         <div class="body-content-custom">
             <h1 class="text-center header-404-custom" style="width: auto">Privacy Notice</h1>
+
+            <!-- privacy info regarding code that I have written -->
             <p>The code I have written for this site ( <a
                     href="https://github.com/psmit703/personal-website/tree/main">github.com/<wbr>psmit703/<wbr>personal-website/<wbr>tree/<Wbr>main</a>
                 ) makes limited use of non-identifiable information:
             <ul>
+                <!-- random image selection on home page -->
                 <li>The <a href="/">Home Page</a> uses JavaScript to determine the height and width
                     (in pixels) of the
                     user's browser window in order to determine whether or not to display an image. If the aspect ratio
@@ -91,6 +114,8 @@
                     on mobile devices. All of the processing is done by the user's browser and nothing is stored or sent
                     back to me (Pete Smith) in any way.
                 </li>
+
+                <!-- changelog info using GitHub's REST API -->
                 <li>The <a href="/changelog.html">Changelog Page</a> uses JavaScript to retrieve
                     recent commits to the site's GitHub repository. It does this by interacting with GitHub's REST API
                     through Octokit.js, which itself is maintained by GitHub and is GitHub's official way of interacting
@@ -101,22 +126,30 @@
                         href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">docs.github.com/<wbr>en/<wbr>site-policy/<wbr>privacy-policies/<wbr>github-privacy-statement</a>
                     ) for more information.
                 </li>
+
+                <!-- retrieving requested URL for 404 page -->
                 <li>The <a href="/404.html">Error 404 Page</a> uses JavaScript to determine the URL
                     that a user has inputted. As this page is an error page, the URL is used in a message displayed to
                     the user. All of the processing is done by the user's browser and nothing is stored or sent back to
                     me (Pete Smith) in any way.
                 </li>
+
+                <!-- navbar -->
                 <li>Every page uses JavaScript for certain navigation bar features. There are three scripts that control
                     this
                     behavior:
                     <ul>
+                        <!-- navbar visibility -->
                         <li>The first, which controls whether the navigation bar is visible, uses JavaScript to
                             determine whether or not a user is scrolling and where the mouse is relative to the
-                            browser's
-                            viewport. These are used to determine whether or not the navigation bar should be displayed.
-                            All of the processing is done by the user's browser and nothing is stored or sent back to me
-                            (Pete Smith) in any way.
+                            browser's viewport. These are used to determine whether or not the navigation bar should be
+                            displayed. These are alos used to determined whether or not the dark mode toggle button
+                            should be displayed, although the conditions are slightly different. All of the processing
+                            is done by the user's browser and nothing is stored or sent back to me (Pete Smith) in any
+                            way.
                         </li>
+
+                        <!-- navbar button animation and closing navbar menu when click/press occurs outside of the navbar -->
                         <li>The second script controls the navigation bar menu animation when the site is viewed in
                             mobile format. This script uses JavaScript to determine whether or not a user has clicked
                             (or pressed for touchscreens) the navigation bar menu icon. This is used to apply a CSS
@@ -126,6 +159,8 @@
                             the navbar menu. All of the processing is done by the user's browser and nothing is stored
                             or sent back to me (Pete Smith) in any way.
                         </li>
+
+                        <!-- left vs. center alignment for navbar items -->
                         <li>The third script controls the text alignment of navbar items. The default state is
                             center-alignment, which appears in desktop mode. This allows for the bold effect of the
                             active page to expand both to the left and the right, rather than just the right. However,
@@ -136,6 +171,8 @@
                         </li>
                     </ul>
                 </li>
+
+                <!-- dark mode -->
                 <li>The entire site has a toggleable dark mode. Dark mode is automatically enabled/disabled depending on
                     a user's device settings. If a user manually toggles dark mode on or off, this preference is stored
                     using a cookie. This cookie is set to expire automatically after 30 days. Additionally, there is a
@@ -144,6 +181,8 @@
                     nothing is sent back to me (Pete Smith) in any way.
                 </li>
             </ul>
+
+            <!-- privacy notice for code that comes from third-parties -->
             Other than what has already been stated on this page, the code I have written for this site does not
             process, store,
             or otherwise use any user data in any way and does not otherwise use cookies. However, this
@@ -151,6 +190,7 @@
             software that may do so. The following are short summaries of relevant privacy statements and
             links to their respective privacy policies, where applicable:</p>
             <ul>
+                <!-- Bootstrap -->
                 <li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a>
                     <ul>
                         <li>Bootstrap does not appear to have a privacy policy, and, as far as I am aware, the service
@@ -162,6 +202,8 @@
                             is
                             loaded:
                             <ul>
+
+                                <!-- jsDelivr -->
                                 <li>jsDelivr
                                     <ul>
                                         <li>jsDelivr's full privacy policy is available at <a
@@ -175,6 +217,8 @@
                                             browser information
                                     </ul>
                                 </li>
+
+                                <!-- jQuery -->
                                 <li>jQuery
                                     <ul>
                                         <li>jQuery's full privacy policy is available at <a
@@ -195,6 +239,8 @@
                         </li>
                     </ul>
                 </li>
+
+                <!-- GitHub Pages, GitHub REST API, Octokit.js -->
                 <li><a href="https://pages.github.com/">GitHub Pages</a> | <a
                         href="https://docs.github.com/en/rest?apiVersion=2022-11-28">GitHub REST API</a> | <a
                         href="https://github.com/octokit/octokit.js">Octokit.js</a>
@@ -223,6 +269,8 @@
                             REST API</li>
                     </ul>
                 </li>
+
+                <!-- Plausible Analytics -->
                 <li><a href="https://plausible.io/">Plausible Analytics</a>
                     <ul>
                         <li>Plausible's full privacy policy is available at <a
@@ -243,6 +291,8 @@
                         </li>
                     </ul>
                 </li>
+
+                <!-- Clicky Website Analytics -->
                 <li><a href="https://clicky.com/">Clicky Website Analytics</a>
                     <ul>
                         <li>Clicky's full privacy policy is available at <a
@@ -278,13 +328,11 @@
                     </ul>
                 </li>
             </ul>
-            </li>
-            </ul>
-            </li>
-            </ul>
 
             <hr />
-            <footer class="footer text-muted text-center" id="footer">
+                  
+            <!-- footer -->
+            <footer class=" footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="/changelog.html">Changelog</a> | <a
                         href="https://github.com/psmit703/personal-website">GitHub
@@ -294,7 +342,6 @@
             </footer>
         </div>
     </div>
-
 
     <!-- required for proper Bootstrap functionality -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

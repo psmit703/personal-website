@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
+<!-- if using this as a template for a new page, be sure to edit the following -->
+<!-- 1. head -->
+<!-- a. title -->
+<!-- b. description -->
+<!-- c. canonical link -->
+<!-- d. page-specific script tags -->
+<!-- 2. body -->
+<!-- a. navbar -->
+<!-- i. navbar links, including for the navbar title -->
+<!-- ii. active page -->
+<!-- iii. screen reader tags -->
+<!-- b. container -->
+<!-- i. should probably remove all container content, but use discretion -->
+<!-- c. footer -->
+<!-- i. footer links -->
+
 <head>
     <title>Writing | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -43,20 +59,24 @@
 </head>
 
 <body>
+    <!-- dark mode toggle button -->
     <div id="dark-mode-btn">
         <input id="btn-circle" type="button"></input>
     </div>
 
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="/">Pete Smith
             </a>
 
+            <!-- navbar toggle button - only visible in mobile format -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options"
                 aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-2">
@@ -81,9 +101,9 @@
         <div class="body-content-custom">
             <h1 class="text-center">Coming soon!</h1>
 
-
-
             <hr />
+
+            <!-- footer -->
             <footer class="footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="/changelog.html">Changelog</a> | <a
@@ -94,7 +114,6 @@
             </footer>
         </div>
     </div>
-
 
     <!-- required for proper Bootstrap functionality -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -107,6 +126,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 
 </html>

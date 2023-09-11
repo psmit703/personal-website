@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
+<!-- if using this as a template for a new page, be sure to edit the following -->
+<!-- 1. head -->
+<!-- a. title -->
+<!-- b. description -->
+<!-- c. canonical link -->
+<!-- d. page-specific script tags -->
+<!-- 2. body -->
+<!-- a. navbar -->
+<!-- i. navbar links, including for the navbar title -->
+<!-- ii. active page -->
+<!-- iii. screen reader tags -->
+<!-- b. container -->
+<!-- i. should probably remove all container content, but use discretion -->
+<!-- c. footer -->
+<!-- i. footer links -->
+
 <head>
     <title>Error 404 | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -14,7 +30,6 @@
     <meta charset="utf-8">
 
     <!-- JS script for 404 url display -->
-    <!-- defer so that body will already be parsed when script starts -->
     <script defer src="/assets/js/404.js"></script>
 
     <!-- stylesheet for Bootstrap -->
@@ -47,20 +62,24 @@
 </head>
 
 <body>
+    <!-- dark mode toggle button -->
     <div id="dark-mode-btn">
         <input id="btn-circle" type="button"></input>
     </div>
 
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light py-2 mb-5 shadow fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="/">Pete Smith
             </a>
 
+            <!-- navbar toggle button - only visible in mobile format -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options"
                 aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-2">
@@ -81,10 +100,11 @@
     </nav>
 
     <div class="container">
-
         <div class="body-content-custom">
+            <!-- error 404 notice -->
+
             <h1 class="text-center header-404-custom" style="width: auto">Error 404</h1>
-            <!-- href attribute and contents of id="404URL" are filled by 404.js -->
+            <!-- href attribute and contents of div id="404URL" are filled by 404.js -->
             <p class="text-center">The requested page ( <a id="404URL"></a> ) does not exist</p>
             <p class="text-center">Please enter a valid URL or use the navbar at the top of this page</p>
             <p class="text-center">If you believe this is an error, please <a
@@ -93,6 +113,7 @@
 
             <hr />
 
+            <!-- footer -->
             <footer class="footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
                 <p><a href="/changelog.html">Changelog</a> | <a
@@ -103,7 +124,6 @@
             </footer>
         </div>
     </div>
-
 
     <!-- required for proper Bootstrap functionality -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -116,6 +136,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 
 </html>

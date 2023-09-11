@@ -18,13 +18,13 @@
 <!-- i. footer links -->
 
 <head>
-    <title>Changelog | Pete Smith</title>
+    <title>TITLE | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <meta name="description" content="Recent changes to my website">
+    <meta name="description" content="DESCRIPTION">
     <meta name="author" content="Pete Smith">
 
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://www.psmit.dev/changelog.html">
+    <link rel="canonical" href="https://www.psmit.dev/SUBPAGE">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -45,14 +45,11 @@
     <!-- navbar scroll script -->
     <script defer src="/assets/js/navbar-scroll.js"></script>
 
-    <!-- delete dark mode cookie script -->
+    <!-- delete all cookies script -->
     <script defer src="/assets/js/delete-cookies.js"></script>
 
     <!-- navbar item text on left for mobile format script -->
     <script defer src="/assets/js/navbar-text-left-mobile.js"></script>
-
-    <!-- changelog/GitHub API script -->
-    <script defer type="module" src="/assets/js/changelog.js"></script>
 
     <!-- Plausible Analytics script -->
     <script defer data-domain="psmit.dev" src="https://plausible.io/js/script.js"></script>
@@ -101,36 +98,15 @@
 
     <div class="container">
         <div class="body-content-custom">
-            <!-- link to all commits -->
-            <h3 class="text-center">Click <a href="https://github.com/psmit703/personal-website/commits">here</a>
-                to see all changes</h3>
-
-            <hr />
-
-            <h3 class="text-center">10 most recent changes</h3>
-
-            <div class="commit-spacing"></div>
-
-            <!-- note regarding GitHub's commit message formatting -->
-            <h5 class="text-center"><i>Please note that while GitHub internally supports separate commit
-                    summaries
-                    and descriptions, their public API does not</i></h5>
-            <h5 class="text-center"><i>Therefore, if a commit description was provided, it will appear appended to the
-                    summary</i></h5>
-
-            <div class="commit-spacing"></div>
-
-            <!-- the contents of div id: "changelog-body" are populated by changelog.js -->
-            <!-- once loaded, contains Bootstrap cards with 10 most recent commits to the site's GitHub repo -->
-            <div id="changelog-body">
-            </div>
+            BODY CONTENT
 
             <hr />
 
             <!-- footer -->
             <footer class="footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
-                <p><a href="#">Changelog</a> | <a href="https://github.com/psmit703/personal-website">GitHub
+                <p><a href="/changelog.html">Changelog</a> | <a
+                        href="https://github.com/psmit703/personal-website">GitHub
                         Repository</a></p>
                 <p><a href="/sitemap.html">Sitemap</a> | <a href="/privacy.html">Privacy Notice</a></p>
                 <p id="delete-cookies-wrapper"><span id="delete-cookies">Reset Dark Mode Preference</span></p>
