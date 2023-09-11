@@ -274,3 +274,8 @@ hr {
 .commit-spacing {
     margin: 40px 0 40px;
 }
+
+/* adds vertical space in between sitemap categories */
+.sitemap-spacing {
+    height: 20px;
+}
