@@ -18,13 +18,13 @@
 <!-- i. footer links -->
 
 <head>
-    <title>Changelog | Pete Smith</title>
+    <title>Sitemap | Pete Smith</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <meta name="description" content="Recent changes to my website">
+    <meta name="description" content="A text-based sitemap for this website">
     <meta name="author" content="Pete Smith">
 
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://www.psmit.dev/changelog.html">
+    <link rel="canonical" href="https://www.psmit.dev/sitemap.html">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -50,9 +50,6 @@
 
     <!-- navbar item text on left for mobile format script -->
     <script defer src="/assets/js/navbar-text-left-mobile.js"></script>
-
-    <!-- changelog/GitHub API script -->
-    <script defer type="module" src="/assets/js/changelog.js"></script>
 
     <!-- Plausible Analytics script -->
     <script defer data-domain="psmit.dev" src="https://plausible.io/js/script.js"></script>
@@ -101,38 +98,84 @@
 
     <div class="container">
         <div class="body-content-custom">
-            <!-- link to all commits -->
-            <h3 class="text-center">Click <a href="https://github.com/psmit703/personal-website/commits">here</a>
-                to see all changes</h3>
+            <h2 class="text-center">Sitemap</h2>
 
             <hr />
 
-            <h3 class="text-center">10 most recent changes</h3>
+            <!-- text-based sitemap -->
+            <div class="row text-center">
+                <div class="col-sm">
+                    <!-- navbar sitemap section -->
+                    <h4>Main Site</h4>
 
-            <div class="commit-spacing"></div>
+                    <div class="sitemap-spacing"></div>
 
-            <!-- note regarding GitHub's commit message formatting -->
-            <h5 class="text-center"><i>Please note that while GitHub internally supports separate commit
-                    summaries
-                    and descriptions, their public API does not</i></h5>
-            <h5 class="text-center"><i>Therefore, if a commit description was provided, it will appear appended to the
-                    summary</i></h5>
+                    <ul style="list-style-type: none; padding: 0px;">
+                        <li><a href=" /">Home Page</a></li>
+                        <li><a href="/resume.html">Résumé</a></li>
+                        <li><a href="/coding.html">Coding Projects</a></li>
+                        <li><a href="/writing.html">Writing Samples</a></li>
+                    </ul>
 
-            <div class="commit-spacing"></div>
+                    <div class="sitemap-spacing"></div>
 
-            <!-- the contents of div id: "changelog-body" are populated by changelog.js -->
-            <!-- once loaded, contains Bootstrap cards with 10 most recent commits to the site's GitHub repo -->
-            <div id="changelog-body">
+                </div>
+                <div class="col-sm">
+                    <!-- footer sitemap section -->
+                    <h4>Footer Links</h4>
+
+                    <div class="sitemap-spacing"></div>
+
+
+                    <ul style="list-style-type: none; padding: 0px;">
+                        <li><a href=" /changelog.html">Changelog</a></li>
+                        <li><a href="/sitemap.html">Sitemap</a></li>
+                        <li><a href="https://github.com/psmit703/personal-website">GitHub Repo (External)</a></li>
+                        <li><a href=" /privacy.html">Privacy Notice</a></li>
+                    </ul>
+
+                    <div class="sitemap-spacing"></div>
+
+                </div>
+                <div class="col-sm">
+                    <!-- utility sitemap section -->
+                    <h4>Utility Pages</h4>
+
+                    <div class="sitemap-spacing"></div>
+
+
+                    <ul style="list-style-type: none; padding: 0px;">
+                        <li><a href="/404.html">Error 404 Page</a></li>
+                        <li><a href="/template.html">Template Page</a></li>
+                    </ul>
+
+                    <div class="sitemap-spacing"></div>
+
+                </div>
             </div>
+
+            <hr />
+
+            <!-- brief description of each sitemap section -->
+            <h5 class="text-center"><i>Pages listed under "Main Site" are accessible through the navbar at the top of
+                    each page</i></h5>
+
+            <h5 class="text-center"><i>Pages listed under "Footer Links" are accessible through the footer at the bottom
+                    of each page</i></h5>
+
+            <h5 class="text-center"><i>Pages listed under "Utility Pages" have no direct links to them on this site
+                    (apart from through this page) and are used as utilities for user user experience and
+                    development</i></h5>
 
             <hr />
 
             <!-- footer -->
             <footer class="footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
-                <p><a href="#">Changelog</a> | <a href="https://github.com/psmit703/personal-website">GitHub
+                <p><a href="/changelog.html">Changelog</a> | <a
+                        href="https://github.com/psmit703/personal-website">GitHub
                         Repository</a></p>
-                <p><a href="/sitemap.html">Sitemap</a> | <a href="/privacy.html">Privacy Notice</a></p>
+                <p><a href="#">Sitemap</a> | <a href="/privacy.html">Privacy Notice</a></p>
                 <p id="delete-cookies-wrapper"><span id="delete-cookies">Reset Dark Mode Preference</span></p>
             </footer>
         </div>
