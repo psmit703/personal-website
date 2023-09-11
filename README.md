@@ -114,6 +114,15 @@ This uses a [custom JavaScript file](https://github.com/psmit703/personal-websit
 
 
 
+#### Sitemap | [/sitemap.html](https://github.com/psmit703/personal-website/blob/main/sitemap.html)
+This page contains a text-based sitemap of the site and can be accessed at 
+
+    https://www.psmit.dev/sitemap.html
+
+It contains a text-based, three column diagram split by "Main Site", "Footer Links", and "Utility Pages". "Main Site" is a guide of the navbar at the top of each page. "Footer Links" is a guide of the footer at the bottom of each page. "Utility Pages" is a guide to pages that otherwise do not have any direct links to them and are just used as utilities for user experience and continued site development.
+
+
+
 #### Privacy Policy | [/privacy.html](https://github.com/psmit703/personal-website/blob/main/privacy.html)
 This is my site's privacy policy. It can either be accessed at the bottom of each page or directly at
 
@@ -129,3 +138,12 @@ As the name suggests, this is my site's "Error 404" page. It is displayed whenev
     https://www.psmit.dev/404.html
 
 In addition to the previously discussed technologies, /404.html makes use of a (very short) [custom JavaScript file](https://github.com/psmit703/personal-website/blob/main/assets/js/404.js). The JS file is used for pulling the current URL and displaying it to the user.
+
+
+
+#### Template | [/template.html](https://github.com/psmit703/personal-website/blob/main/template.html)
+This page is a skeleton page that is designed to be used as a template for any future pages. It can be accessed at
+
+    https://www.psmit.dev/template.html
+
+It contains comments at the top indicating what may need to be changed (every page has these comments) and is designed to be an easy, reliable way to quickly create new pages. As with any other page, it will be updated as necessary to reflect the most recent additions to the site.
