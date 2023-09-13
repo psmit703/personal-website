@@ -111,7 +111,7 @@ function toDarkMode() {
     let anchors = document.getElementsByTagName("a");
     for (let i = 0; i < anchors.length; i++) {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
-            if (!anchors[i].classList.contains("commit-link") && !anchors[i].classList.contains("user-link")) {
+            if (!anchors[i].classList.contains("card-link") && !anchors[i].classList.contains("user-link")) {
                 anchors[i].style.color = "#009dff";
             } else if (anchors[i].classList.contains("user-link")) {
                 anchors[i].style.color = "rgb(0, 86, 179)";
@@ -126,10 +126,10 @@ function toDarkMode() {
         window.scrollTo(0, document.body.scrollHeight);
     }
 
-    let changelogs = document.getElementsByClassName("changelogs");
-    for (let i = 0; i < changelogs.length; i++) {
-        changelogs[i].style.backgroundColor = "rgb(136, 136, 136)";
-        changelogs[i].style.color = "rgb(248, 249, 250)";
+    let card = document.getElementsByClassName("card");
+    for (let i = 0; i < card.length; i++) {
+        card[i].style.backgroundColor = "rgb(136, 136, 136)";
+        card[i].style.color = "rgb(248, 249, 250)";
     }
 
     darkModeBtn.style.backgroundPosition = "35% 65%";
@@ -173,7 +173,7 @@ function toLightMode() {
     let anchors = document.getElementsByTagName("a");
     for (let i = 0; i < anchors.length; i++) {
         if (!anchors[i].classList.contains("nav-link") && !anchors[i].classList.contains("navbar-brand")) {
-            if (!anchors[i].classList.contains("commit-link") && !anchors[i].classList.contains("user-link")) {
+            if (!anchors[i].classList.contains("card-link") && !anchors[i].classList.contains("user-link")) {
                 anchors[i].style.color = "#007bff";
             } else if (anchors[i].classList.contains("user-link")) {
                 anchors[i].style.color = "rgb(0, 123, 255)";
@@ -188,7 +188,7 @@ function toLightMode() {
         window.scrollTo(0, document.body.scrollHeight);
     }
 
-    let changelogs = document.getElementsByClassName("changelogs");
+    let changelogs = document.getElementsByClassName("card");
     for (let i = 0; i < changelogs.length; i++) {
         changelogs[i].style.backgroundColor = "rgb(255, 255, 255)";
         changelogs[i].style.color = "rgb(33, 37, 41)";

@@ -4,16 +4,16 @@
 import { Octokit, App } from "https://esm.sh/octokit";
 
 let changelogContainer = document.getElementById("changelog-body");
-
+{/* <div class=\"card-wrapper d-flex justify-content-center\"></div> */ }
 // various templates for each changelog div
-let preUserURL = "<div class=\"card changelogs\"><div class=\"card-body\"><a class=\"user-link\" href=\""
+let preUserURL = "<div class=\"card-wrapper d-flex justify-content-center\"><div class=\"card changelogs\" style=\"width: 80%;\"><div class=\"card-body\"><a class=\"user-link\" href=\""
 let preImg = "\">"
 let preLogin = "<h5 class=\"card-title\" style=\"vertical-align: middle; display: inline\">"
 let preName = " ("
 let preTime = ")</a> | "
 let preDesc = "</h5><p class=\"card-text\">"
 let preLink = "</p><a href=\""
-let endTemplate = "\" class=\"btn btn-primary commit-link\">GitHub Commit Link</a></div></div>"
+let endTemplate = "\" class=\"btn btn-primary card-link\">GitHub Commit Link</a></div></div></div>"
 
 const octokit = new Octokit();
 
@@ -60,7 +60,7 @@ $.when(rspns).done(function (data) {
 
         changelogContainer.innerHTML += template;
         if (i != commits.length - 1 && i != 9) {
-            changelogContainer.innerHTML += "<div class=\"commit-spacing\"></div>"
+            changelogContainer.innerHTML += "<div class=\"card-spacing\"></div>"
         }
     }
 

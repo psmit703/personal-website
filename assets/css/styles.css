@@ -271,7 +271,7 @@ hr {
 }
 
 /* adds spacing between changelog cards */
-.commit-spacing {
+.card-spacing {
     margin: 40px 0 40px;
 }
 
