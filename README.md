@@ -88,11 +88,11 @@ Both résumés are displayed in plain text, with links above each to download PD
 
 
 #### Coding | [/coding.html](https://github.com/psmit703/personal-website/blob/main/coding.html)
-The coding page is where the various coding projects I have worked on will available. The page can be accessed at
+The coding page is where the various coding projects I have worked are available. The page can be accessed at
 
     https://psmit.dev/coding.html
 
-There is no content yet.
+Descriptions of each project, along with information such as time periods and languages used, are provided here. Please note that, per academic integrity guidelines, I am not permitted to share code for school projects publicly; as such, the links for school projects each provide my email address so that the code can be shared privately with employers, recruiters, etc. Additionally, some projects may otherwise not have any available code, which is marked for each occurence. Some projects are fully private and may not be listed at all. Fully public projects contain links to view the code in their respective GitHub repositories. While there are the previously mentioned limitations, this page serves as a general coding portfolio that allows a viewer to see what I believe are good representations of my abilities as a programmer.
 
 
 
