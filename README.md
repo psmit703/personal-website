@@ -2,6 +2,8 @@
 #### A personal portfolio website for all things Pete Smith
 #### [Repo Link](https://github.com/psmit703/personal-website)
 
+___
+
 Welcome to my portfolio! The following is a brief description of software/services used in the site, along with a general description of each page. All URLs listed can either be accessed with or without the "www" subdomain. URLs without the "www" subdomain will automatically redirect to
 
     https://www.psmit.dev
@@ -111,6 +113,8 @@ This page displays the 10 most recent changes to the site and can be accessed at
     https://psmit.dev/changelog.html
 
 This uses a [custom JavaScript file](https://github.com/psmit703/personal-website/blob/main/assets/js/changelog.js) to interact with GitHub's REST API. The custom JavaScript file in turn uses [Octokit.js](https://github.com/octokit/octokit.js), which is maintained by GitHub. This allows the most recent commits to be retrieved, which are then displayed on the page. The page also contains a link to view all changes to the site.
+
+*"What's the best way to make a static site a little less static? Just use other people's dynamic servers!" - Pete Smith, September 20, 2023*
 
 
 
