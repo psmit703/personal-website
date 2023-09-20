@@ -2,8 +2,6 @@
 #### A personal portfolio website for all things Pete Smith
 #### [Repo Link](https://github.com/psmit703/personal-website)
 
-___
-
 Welcome to my portfolio! The following is a brief description of software/services used in the site, along with a general description of each page. All URLs listed can either be accessed with or without the "www" subdomain. URLs without the "www" subdomain will automatically redirect to
 
     https://www.psmit.dev
