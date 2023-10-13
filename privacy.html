@@ -59,6 +59,11 @@
 </head>
 
 <body>
+    <!-- Load icons for light/dark mode toggle button -->
+    <!-- Intended to avoid potential slow icon loading times if the mode is manually switched -->
+    <img src="/assets/images/light-mode.svg" style="display:none;">
+    <img src="/assets/images/dark-mode.svg" style="display:none;">
+
     <!-- dark mode toggle button -->
     <div id="dark-mode-btn">
         <input id="btn-circle" type="button"></input>
@@ -330,7 +335,7 @@
             </ul>
 
             <hr />
-                  
+
             <!-- footer -->
             <footer class=" footer text-muted text-center" id="footer">
                 <p>&copy; 2023 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
