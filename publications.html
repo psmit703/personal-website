@@ -107,7 +107,84 @@
 
     <div class="container">
         <div class="body-content-custom">
-            BODY CONTENT
+            <h3 class="text-center">Publications</h3>
+
+            <div class="card-spacing"></div>
+
+            <!-- begin publications -->
+            <div id="comet-statistics" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">"Comet Statistics - A graphical representation of international comet
+                            discovery and observation statistics from the NASA PDS Small Bodies Node and the Minor
+                            Planet Center"</h5>
+                        <br>
+                        <h6>Abstract:</h6>
+                        <p class="card-text">The Minor Planet Center (MPC) is the International Astronomical Union’s
+                            recognized clearing house for all positional and categorization data for small bodies,
+                            a.k.a. comets, asteroids, and irregular satellites. Comprehensive Discovery statistics are
+                            often represented as lists and specialized data tables on the MPC’s website (<a
+                                href="https://minorplanetcenter.net">https://minorplanetcenter.net</a>). We are creating
+                            an interface to summarize the discovery
+                            and observation data available through a variety of sources. Specifically, we use the
+                            Minor Planet Center’s table containing orbital elements for all comets, the NASA JPL
+                            Small Bodies Database API, and a copy of the MPC’s live processing database hosted
+                            by the Small Bodies Node. Each of these are parsed for the relevant data with a Python
+                            script using either HTTP requests or a Python-PostgreSQL library. This data is then
+                            processed and copied to the live site files, where it is then rendered in graph form by
+                            the user’s browser by using the Plotly.js framework. The site is designed to work as
+                            it is and, beyond a web browser, should not require the user to install any additional
+                            software.
+                            <br><br>
+                            Comet Statistics contains three main sections: comet discoveries, orbital elements,
+                            and unique object observations. Similarly to summary information provided in (Bauer
+                            et al. 2022), the unique object observations pages also support overlaying an arbitrary
+                            number of user-specified observatory codes onto each graph. Comet discoveries and orbital
+                            elements pages do not
+                            currently support this due to database discrepancies, which
+                            we are working to resolve.
+                            <br><br>
+                            The comet discovery subpage shows statistics by year and comet type. Data is retrieved from
+                            the Minor Planet Center,
+                            along with the NASA JPL Small Bodies Database
+                            to cover potential missing data. The orbital elements section contains subpages for
+                            different comet types. Each subpage
+                            contains five graphs relating to orbital elements.
+                            Orbital element data is retrieved from the Minor Planet Center. The third section of the
+                            site, unique observations, shows unique object observations by year and by comet type.
+                            <br><br>
+                            In addition to the three graphical data sections of the site, Comet Statistics is also
+                            standing up an engine for converting from the "new" IAU comet designation system to
+                            the "old" system. This is only expected to be an internal tool and will be in support
+                            of Dr. Tony Farnham’s work, which currently involves manually doing these conversions. The
+                            purpose of this ongoing
+                            project is to automate this process; the anticipated
+                            increases in comet discoveries/observations from Vera Rubin/LSST and Neo Surveyor
+                            surveys will likely make this unmanageable from a manual standpoint. Making these
+                            conversions will allow for a single reference source for comet nomenclature that will
+                            open legacy data sources to research investigations. By using this, researchers may be
+                            able to avoid confusion and refer to comets using only one designation system, even
+                            when source data may be referred to using multiple names.
+                            <br><br>
+                            Bauer, J. M., Fernández, Y. R., Protopapa, S., & Woodney, L. M. 2022, arXiv e-prints,
+                            arXiv:2210.09400. 2210.09400
+                            <hr />
+                        <h6>Citation:</h6>
+                        Smith, P. S., Tjiputra, L., Bauer, J. M., Sharkey, B., and Farnham, T., "Comet Statistics -
+                        A graphical representation of international comet discovery and observation statistics from
+                        the NASA PDS Small Bodies Node and the Minor Planet Center", in Astronomical Data Analysis
+                        Software and Systems XXXIII, 2024, in press.
+                        <hr />
+                        This is the paper component of my presentation of "Comet Statistics" from November 8, 2023.
+                        The paper will be published as part of the ADASS XXXIII Conference Proceedings by the
+                        Astronomical Society of the Pacific.
+                        <hr />
+                        </p>
+                        <a href="#" class="btn btn-primary card-link">Publication not yet available</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end publications -->
 
             <hr />
 
