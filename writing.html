@@ -56,6 +56,21 @@
 
     <!-- Clicky Website Analytics script -->
     <script async data-id="101425859" src="//static.getclicky.com/js"></script>
+
+    <!-- structured data -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org/",
+        "@type": "WebPage",
+        "name": "Writing Samples",
+        "abstract": "My writing samples! Brief descriptions are provided for each paper, along with a link to a PDF download",
+        "copyrightHolder": "Pete Smith",
+        "copyrightNotice": "© 2023 Pete Smith",
+        "copyrightYear": "2023",
+        "creator": "Pete Smith",
+        "author": "Pete Smith",
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        </script>
 </head>
 
 <body>
@@ -83,23 +98,24 @@
 
             <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbar-options">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link nav-home-custom text-center" href="/">Home</a>
+                <ul class="navbar-nav ml-auto" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-home-custom text-center" href="/" itemprop="url">Home</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link nav-resume-custom text-center" href="/resume.html">Résumé</a>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-resume-custom text-center" href="/resume.html" itemprop="url">Résumé</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link nav-publications-custom text-center"
-                            href="/publications.html">Publications</a>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-publications-custom text-center" href="/publications.html"
+                            itemprop="url">Publications</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link nav-coding-custom text-center" href="/coding.html">Coding Projects</a>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-coding-custom text-center" href="/coding.html" itemprop="url">Coding
+                            Projects</a>
                     </li>
-                    <li class="nav-item mx-2 active active-custom">
-                        <a class="nav-link nav-writing-custom text-center" href="#">Writing Samples<span
-                                class="sr-only">(current)</span></a>
+                    <li class="nav-item mx-2 active active-custom" itemprop="name">
+                        <a class="nav-link nav-writing-custom text-center" href="/writing.html" itemprop="url">Writing
+                            Samples<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
