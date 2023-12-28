@@ -120,105 +120,51 @@
             <!-- privacy info regarding code that I have written -->
             <p>The code I have written for this site ( <a
                     href="https://github.com/psmit703/personal-website/tree/main">github.com/<wbr>psmit703/<wbr>personal-website/<wbr>tree/<Wbr>main</a>
-                ) makes limited use of non-identifiable information:
+                ) makes limited use of non-identifiable information such as screen dimensions and mouse location to
+                ensure the proper operation of site functionalities. This data is not stored or sent back to me (Pete
+                Smith) in any way. The following features are implemented using JavaScript and make use of this
+                information:</p>
             <ul>
-                <!-- random image selection on home page -->
-                <li>The <a href="/">Home Page</a> uses JavaScript to determine the height and width
-                    (in pixels) of the
-                    user's browser window in order to determine whether or not to display an image. If the aspect ratio
-                    is too small, then no image is displayed. This is done to create, in my opinion, a better aesthetic
-                    on mobile devices. All of the processing is done by the user's browser and nothing is stored or sent
-                    back to me (Pete Smith) in any way.
-                </li>
-
-                <!-- changelog info using GitHub's REST API -->
-                <li>The <a href="/changelog.html">Changelog Page</a> uses JavaScript to retrieve
-                    recent commits to the site's GitHub repository. It does this by interacting with GitHub's REST API
-                    through Octokit.js, which itself is maintained by GitHub and is GitHub's official way of interacting
-                    with their REST API. The code that I have written processes solely on the user's browser and nothing
-                    is stored or sent back to me (Pete Smith) in any way. However, as this interacts with GitHub's REST
-                    API, I cannot guarantee that anything related to data-privacy is true regarding GitHub. Please see
-                    GitHub's privacy policy ( <a
-                        href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">docs.github.com/<wbr>en/<wbr>site-policy/<wbr>privacy-policies/<wbr>github-privacy-statement</a>
-                    ) for more information.
-                </li>
-
-                <!-- retrieving requested URL for 404 page -->
-                <li>The <a href="/404.html">Error 404 Page</a> uses JavaScript to determine the URL
-                    that a user has inputted. As this page is an error page, the URL is used in a message displayed to
-                    the user. All of the processing is done by the user's browser and nothing is stored or sent back to
-                    me (Pete Smith) in any way.
-                </li>
-
-                <!-- navbar -->
-                <li>Every page uses JavaScript for certain navigation bar features. There are three scripts that control
-                    this
-                    behavior:
+                <li>Selecting a random image to display on the <a href="/">Home Page</a></li>
+                <li>Retrieving the ten most recent changes to the site via GitHub's REST API
                     <ul>
-                        <!-- navbar visibility -->
-                        <li>The first, which controls whether the navigation bar is visible, uses JavaScript to
-                            determine whether or not a user is scrolling and where the mouse is relative to the
-                            browser's viewport. These are used to determine whether or not the navigation bar should be
-                            displayed. These are alos used to determined whether or not the dark mode toggle button
-                            should be displayed, although the conditions are slightly different. All of the processing
-                            is done by the user's browser and nothing is stored or sent back to me (Pete Smith) in any
-                            way.
-                        </li>
-
-                        <!-- navbar button animation and closing navbar menu when click/press occurs outside of the navbar -->
-                        <li>The second script controls the navigation bar menu animation when the site is viewed in
-                            mobile format. This script uses JavaScript to determine whether or not a user has clicked
-                            (or pressed for touchscreens) the navigation bar menu icon. This is used to apply a CSS
-                            rotation animation to the menu icon. This script also controls whether or not a click/press
-                            will close the navbar menu in mobile format. If the navbar menu is open and the site is
-                            being viewed in mobile format, then clicking/pressing outside of the navbar menu will close
-                            the navbar menu. All of the processing is done by the user's browser and nothing is stored
-                            or sent back to me (Pete Smith) in any way.
-                        </li>
-
-                        <!-- left vs. center alignment for navbar items -->
-                        <li>The third script controls the text alignment of navbar items. The default state is
-                            center-alignment, which appears in desktop mode. This allows for the bold effect of the
-                            active page to expand both to the left and the right, rather than just the right. However,
-                            in mobile format, center-alignment would make it centered relative to the screen. As such,
-                            this script uses JavaScript to change the navbar items to left-aligned when the site is
-                            viewed in mobile format. All of the processing is done by the user's browser and nothing is
-                            stored or sent back to me (Pete Smith) in any way.
-                        </li>
+                        <li>Please note that, while the code I have written does not store or send such data, GitHub's
+                            API might. Please see GitHub's privacy policy ( <a
+                                href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">docs.github.com/<wbr>en/<wbr>site-policy/<wbr>privacy-policies/<wbr>github-privacy-statement</a>
+                            ) for more information</li>
                     </ul>
                 </li>
-
-                <!-- dark mode -->
-                <li>The entire site has a toggleable dark mode. Dark mode is automatically enabled/disabled depending on
-                    a user's device settings. If a user manually toggles dark mode on or off, this preference is stored
-                    using a cookie. This cookie is set to expire automatically after 30 days. Additionally, there is a
-                    clickable option at the bottom of each page that allows a user to manually delete this cookie. The
-                    cookie is stored on the user's device, all of the processing is done by the user's browser, and
-                    nothing is sent back to me (Pete Smith) in any way.
+                <li>If a URL is invalid, the requested URL that the user specified is retrieved and displayed on the
+                    <a href="/404.html">Error 404 Page</a>
                 </li>
+                <li>Determining whether or not to display the navigation bar based on scroll position, mouse position,
+                    and other related details</li>
+                <li>Determining whether or not to display the dark mode toggle button based on scroll position, mouse
+                    position, and other related details</li>
+                <li>Determining whether or not a user has clicked the navigation bar dropdown menu button (in mobile
+                    format) in order to apply a CSS animation and prevent the menu from being accidentally closed</li>
+                <li>Determining whether or not a user has clicked the navigation bar dropdown menu button (in mobile
+                    format) in order to change the alignment of menu items to prevent minor visual discrepancies</li>
+                <li>Determining whether or not a user's device has a dark mode preference and reading and/or writing
+                    a cookie to save a user-specified dark mode preference, which is deleted automatically by the user's
+                    browser after 30 days or when the user deletes it through the menu at the bottom of each page,
+                    whichever comes first</li>
             </ul>
 
             <!-- privacy notice for code that comes from third-parties -->
             Other than what has already been stated on this page, the code I have written for this site does not
-            process, store,
-            or otherwise use any user data in any way and does not otherwise use cookies. However, this
-            site makes use of various third party
-            software that may do so. The following are short summaries of relevant privacy statements and
-            links to their respective privacy policies, where applicable:</p>
+            process, store, or otherwise use any user data in any way. However, this site makes use of various third
+            party software that may do so. The following are short summaries of relevant privacy statements and links to
+            their respective privacy policies, where applicable:</p>
             <ul>
                 <!-- Bootstrap -->
                 <li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a>
                     <ul>
                         <li>Bootstrap does not appear to have a privacy policy, and, as far as I am aware, the service
-                            itself
-                            does
-                            not
-                            collect or process user data</li>
+                            itself does not collect or process user data</li>
                         <li>However, Bootstrap's components are imported from two different CDNs when the site
-                            is
-                            loaded:
+                            is loaded:
                             <ul>
-
                                 <!-- jsDelivr -->
                                 <li>jsDelivr
                                     <ul>
@@ -226,11 +172,8 @@
                                                 href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net">www.jsdelivr.com/<wbr>terms/<wbr>privacy-policy-jsdelivr-net</a>
                                         </li>
                                         <li>As of July 10, 2023, jsDeliver, in short, does not collect personal
-                                            data or
-                                            use
-                                            cookies, but may collect various usage statistics such as IP
-                                            addresses and
-                                            browser information
+                                            data or use cookies, but may collect various usage statistics such as IP
+                                            addresses and browser information
                                     </ul>
                                 </li>
 
@@ -241,14 +184,10 @@
                                                 href="https://openjsf.org/wp-content/uploads/sites/84/2021/04/OpenJS-Foundation-Privacy-Policy-2019-11-15.pdf">openjsf.org/<wbr>wp-content/<Wbr>uploads/<Wbr>sites/<Wbr>84/<wbr>2021/<wbr>04/<wbr>OpenJS-Foundation-Privacy-Policy-2019-11-15.pdf</a>
                                         </li>
                                         <li>As of November 21, 2019, jQuery, in short, may collect usage
-                                            statistics such
-                                            as
-                                            IP addresses and browser information through the use of cookies, web
-                                            beacons,
-                                            and "other technologies," along with collecting de-identified
-                                            information
-                                            for
-                                            analysis and improvement purposes</li>
+                                            statistics such as IP addresses and browser information through the use of
+                                            cookies, web
+                                            beacons, and "other technologies," along with collecting de-identified
+                                            information for analysis and improvement purposes</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -268,21 +207,15 @@
                         <li>As of July 10, 2023, GitHub offers the following summary:
                             <ul>
                                 <li>When a GitHub Pages site is visited, the visitor's IP address is logged and
-                                    stored
-                                    for
-                                    security purposes, regardless of
-                                    whether the visitor has signed into GitHub or not. For more information
-                                    about
-                                    GitHub's
-                                    security practices, see <a
+                                    stored for security purposes, regardless of whether the visitor has signed into
+                                    GitHub or not. For more information about GitHub's security practices, see <a
                                         href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub
                                         Privacy Statement</a>.
                                 </li>
                             </ul>
                         </li>
                         <li>Note: Octokit.js is maintained by GitHub and is GitHub's official way of interacting with
-                            their
-                            REST API</li>
+                            their REST API</li>
                     </ul>
                 </li>
 
