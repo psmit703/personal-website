@@ -285,3 +285,8 @@ hr {
 .sitemap-spacing {
     height: 20px;
 }
+
+/* counteract margin color effects that Bootstrap does for button clicks by default */
+.btn:focus {
+    box-shadow: none !important;
+}
