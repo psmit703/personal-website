@@ -288,5 +288,15 @@ hr {
 
 /* counteract margin color effects that Bootstrap does for button clicks by default */
 .btn:focus {
-    box-shadow: none !important;
+    box-shadow: none;
+}
+
+/* fixes focus boldness in nav links staying on after middle clicking */
+.nav-link:focus {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* forces focus boldness in nav links to stay on while hovering, even after middle clicking */
+.nav-link:hover {
+    color: rgba(0, 0, 0, 0.7) !important;
 }
