@@ -300,3 +300,11 @@ hr {
 .nav-link:hover {
     color: rgba(0, 0, 0, 0.7) !important;
 }
+
+/* stylizes programming language, framework, etc. SVGs */
+.langSVG {
+    height: 90px;
+    width: 90px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
