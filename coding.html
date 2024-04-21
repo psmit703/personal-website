@@ -205,6 +205,333 @@
             <div class="card-spacing"></div>
 
             <!-- begin project descriptions -->
+            <div id="static-site-gen" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Static Site Generator (Python, HTML, JSON)<span
+                                style="float: right;">(Mar
+                                2024 - Present)</span>
+                        </h5>
+                        <p class="card-text">This is a static website generator written in Python. The goal of the
+                            project is to create a tool that allows me to
+                            easily update my portfolio website as needed in an algorithmic way.
+                            <br><br>
+                            The program takes in a JSON object and a template HTML page; the JSON object contains all of
+                            the customizable
+                            information necessary to build each page of the site, and the program uses that data to
+                            populate specified fields in the
+                            template. The JSON is structured in a way that allows me to easily update both individual
+                            pages and the entire site
+                            structure without having to worry about manually (and accurately) updating the navbar in
+                            every HTML file or other
+                            similar things.
+                            <br><br>
+                            This project was originally inspired by Hakyll, ( <a
+                                href="https://jaspervdj.be/hakyll/">https://jaspervdj.be/hakyll/</a> ) a tool that uses
+                            Haskell to generate
+                            static sites. (Although, without having actually used Hakyll, I imagine it is much more
+                            robust than my project.) I have
+                            much less experience using Haskell, however, and in fact I originally attempted to make this
+                            using OCaml, but I felt
+                            that the functional side of things was getting a little too far away from me. While I love
+                            functional programming,
+                            sometimes I just want to use Python because of how intuitive it is.
+                        </p>
+                        <a href="https://github.com/psmit703/static-site-generator"
+                            class="btn btn-primary card-link">GitHub
+                            Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="comet--num-auto" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Comet Observations (Python, SQL)<span style="float: right;">(Apr 2024
+                                - Apr 2024)</span></h5>
+                        <p class="card-text">Modified a script for the NASA Planetary Data System Small Bodies Node at
+                            the University of Maryland that determines
+                            "single" observations of a comet from an observatory.
+                            <br><br>
+                            The original script was created by Nikki Tjiputra for the Small Bodies Node. It uses data
+                            from SBN's local PostgreSQL
+                            database and, based on time elapsed between observations of a single object, determines
+                            whether or not those groupings
+                            of observations should be considered one single observation. This was originally only done
+                            for observatory C51-NEOWISE.
+                            <br><br>
+                            My task was to generalize the script to do the same thing for every observatory separately.
+                            Due to the way data is
+                            represented in SBN's database, this required many modifications in order to process the data
+                            correctly while maintaining
+                            differences between observatories. Given the much larger amount of data being processed, I
+                            also had to make numerous
+                            optimizations to the added code to ensure that the script completes in a reasonable amount
+                            of time.
+                            <br><br>
+                            This project is associated with the NASA Planetary Data System Small Bodies Node at the
+                            University of Maryland.
+                        </p>
+                        <a href="#" class="btn btn-primary card-link" style="pointer-events: none;">(Code currently
+                            unavailable)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="minidafny-veri-cond" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">MiniDafny - Verification Conditions (Haskell, Dafny)<span
+                                style="float: right;">(Apr 2024)</span>
+                        </h5>
+                        <p class="card-text">Implemented verification conditions for MiniDafny, a subset of Dafny as
+                            defined by course faculty. This primarily
+                            involved creating functions that compute weakest preconditions based on Hoare Logic. The
+                            project implements this through
+                            substitution and recursion as determined by Hoare Logic and based on parsed MiniDafny input
+                            and goes on to implement
+                            verification conditions for while loops, blocks, and methods, and is compatible with
+                            MiniDafny's pre-conditions,
+                            post-conditions, and loop invariants.
+                            <br><br>
+                            This project is associated with <i>CMSC433: Programming Language Technologies and
+                                Paradigms</i> at the University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="minidafny-parsing" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">MiniDafny - Parsing (Haskell, Dafny)<span style="float: right;">(Apr
+                                2024)</span>
+                        </h5>
+                        <p class="card-text">Implemented parsing for MiniDafny, a subset of Dafny as defined by course
+                            faculty. This complements the previous
+                            project, MiniDafny - Printing, and is designed in a way that allows outputs from this
+                            project to easily be passed in as
+                            inputs to the previous project. This project implemented a slightly modified grammar from
+                            the previous project and is
+                            able to handle MiniDafny code in a similar way, albeit reverse, way.
+                            <br><br>
+                            This project is associated with <i>CMSC433: Programming Language Technologies and
+                                Paradigms</i> at the University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="life-expectancy" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Life Expectancy Data Processing (Python)<span style="float: right;">(Apr
+                                2024)</span>
+                        </h5>
+                        <p class="card-text">This project uses a TSV (tab seperated value) file as its input. It
+                            processes the table, which contains information on
+                            life expectancy with respect to country, continent, year, population, and per capita GDP. I
+                            used several different ways
+                            of visualizing this data, notably scatter plots, violin plots, and regression lines. These
+                            were all useful in showing
+                            different interpretations of the given data and allowed me to better complete the overall
+                            goal of the project, which was
+                            to show to what extent life expectancy, country, continent, year, population, and per capita
+                            GDP are correlated and to
+                            determine potential insights from that.
+                            <br><br>
+                            This project is associated with <i>CMSC320: Introduction to Data Science</i> at the
+                            University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="comet--num-auto" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Comet Numbering Automation (Python)<span style="float: right;">(Jan 2024
+                                - Apr 2024)</span></h5>
+                        <p class="card-text">Created a script for the NASA Planetary Data System Small Bodies Node at
+                            the University of Maryland that converts from
+                            the "new" IAU comet designation system to the "old" IAU comet designation system.
+                            <br><br>
+                            The script uses Central Bureau Electronic Telegrams (CBETs) in order to obtain the necessary
+                            data. The CBETs were
+                            downloaded automatically by an existing IDL script provided by the project leader and
+                            subsequently parsed by this Python
+                            script.
+                            <br><br>
+                            The script iterates through each CBET and looks for specific words or combinations of words
+                            in order to determine the
+                            relevancy of each file. Then, based on relevancy, it parses each CBET for various orbital
+                            element information that is
+                            then used to determine whether a comet should be listed as periodic or not and to propose
+                            what name should be given to
+                            that comet under the old designation system's rules.
+                            <br><br>
+                            This script serves to automate part of the process of converting designations; while making
+                            the process fully automatic
+                            would likely be impossible, the upcoming first lights of the Vera C. Rubin Observatory and
+                            NEO Surveyor are expected to
+                            result in an influx of comet discoveries that will make this process overwhelmingly
+                            difficult to continue doing entirely
+                            manually. This script will automate a significant part of this work in order to make the
+                            rest of the process manageable
+                            for one person to continue to do. This project will allow researchers to continue to
+                            cross-reference comet names between
+                            the new and old systems well into the future.
+                            <br><br>
+                            This project is associated with the NASA Planetary Data System Small Bodies Node at the
+                            University of Maryland.
+                        </p>
+                        <a href="#" class="btn btn-primary card-link" style="pointer-events: none;">(Code currently
+                            unavailable)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="minidafny-printing" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">MiniDafny - Printing (Haskell, Dafny)<span style="float: right;">(Mar
+                                2024)</span>
+                        </h5>
+                        <p class="card-text">Implemented pretty printing for MiniDafny, a subset of Dafny as defined by
+                            course faculty. This involved implementing
+                            numerous functions that input parsed Dafny code and output Dafny code as it would be written
+                            by a programmer. With
+                            larger pieces of grammar such as Dafny methods, this became increasingly complicated due to
+                            the increasing number of
+                            cases that had to be accounted for.
+                            <br><br>
+                            This project is associated with <i>CMSC433: Programming Language Technologies and
+                                Paradigms</i> at the University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="haskell-basics" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Haskell Basics (Haskell)<span style="float: right;">(Mar 2024)</span>
+                        </h5>
+                        <p class="card-text">Implemented numerous functions in Dafny, making use of the language's
+                            syntax for runtime verification. This involved
+                            writing function pre- and post-conditions and loop invariants that allowed Dafny to properly
+                            use its runtime
+                            verification tools.
+                            <br><br>
+                            This project is associated with <i>CMSC433: Programming Language Technologies and
+                                Paradigms</i> at the University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="moeyball" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Moneyball Data Processing (Python)<span style="float: right;">(Mar
+                                2024)</span>
+                        </h5>
+                        <p class="card-text">Used SQLite to process data from Sean Lahman's baseball database. After
+                            processing and cleaning data, I created numerous
+                            graphs that visualized statistics such as payroll over time, spread in payroll over time,
+                            and winning percentage over
+                            payroll. It also involved displaying regression lines. All of this was done in an attempt to
+                            show to what extent Billy
+                            Beane's "moneyball" strategy with the Oakland Athletics was effective.
+                            <br><br>
+                            This project is associated with <i>CMSC320: Introduction to Data Science</i> at the
+                            University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="dafny-veri" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Dafny Verification (Dafny)<span style="float: right;">(Feb 2024)</span>
+                        </h5>
+                        <p class="card-text">Implemented numerous functions in Dafny, making use of the language's
+                            syntax for runtime verification. This involved
+                            writing function pre- and post-conditions and loop invariants that allowed Dafny to properly
+                            use its runtime
+                            verification tools.
+                            <br><br>
+                            This project is associated with <i>CMSC433: Programming Language Technologies and
+                                Paradigms</i> at the University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
+            <div id="solar-flares" class="card-wrapper d-flex justify-content-center">
+                <div class="card" style="width: 80%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Solar Flare Data Processing (Python)<span style="float: right;">(Feb
+                                2024)</span>
+                        </h5>
+                        <p class="card-text">Processed, visualized, and interpreted solar flare data. This project
+                            firstly involved downloading solar flare data via
+                            a webdriver and extensively sanitizing bad data. It then created and displayed four graphs.
+                            The first two were scatter
+                            plots, showing starting frequency over time and ending frequency over time, respectively.
+                            The third plot was a bar plot
+                            and showed all four combinations of the number of solar flares with halos and the top fifty
+                            solar flares. The fourth
+                            plot showed the number of strong and weak solar flares over time in an attempt to establish
+                            whether or not they formed a
+                            pattern.
+                            <br><br>
+                            This project is associated with <i>CMSC320: Introduction to Data Science</i> at the
+                            University of Maryland.
+                        </p>
+                        <a href="mailto:psmit703@outlook.com" class="btn btn-primary card-link">Contact for access to
+                            code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-spacing"></div>
+
             <div id="comet-disc-veri" class="card-wrapper d-flex justify-content-center">
                 <div class="card" style="width: 80%;">
                     <div class="card-body">
