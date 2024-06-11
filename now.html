@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<!-- if using this as a template for a new page, be sure to edit the following -->
+<!-- 1. head -->
+<!-- a. title -->
+<!-- b. description -->
+<!-- c. canonical link -->
+<!-- d. page-specific script tags -->
+<!-- 2. body -->
+<!-- a. navbar -->
+<!-- i. navbar links, including for the navbar title -->
+<!-- ii. active page -->
+<!-- iii. screen reader tags -->
+<!-- b. container -->
+<!-- i. should probably remove all container content, but use discretion -->
+<!-- c. footer -->
+<!-- i. footer links -->
+
+<head>
+    <title>Now | Pete Smith</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <meta name="description" content="What I'm doing now">
+    <meta name="author" content="Pete Smith">
+
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://www.psmit.dev/now">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- stylesheet for Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- custom stylesheet across subpages -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <!-- navbar button script -->
+    <script defer src="/assets/js/navbar-button.js"></script>
+
+    <!-- dark mode script -->
+    <script defer src="/assets/js/dark-mode.js"></script>
+
+    <!-- navbar scroll script -->
+    <script defer src="/assets/js/navbar-scroll.js"></script>
+
+    <!-- delete all cookies script -->
+    <script defer src="/assets/js/delete-cookies.js"></script>
+
+    <!-- navbar item text on left for mobile format script -->
+    <script defer src="/assets/js/navbar-text-left-mobile.js"></script>
+
+    <!-- Plausible Analytics script -->
+    <script defer data-domain="psmit.dev" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Clicky Website Analytics script -->
+    <script async data-id="101425859" src="//static.getclicky.com/js"></script>
+</head>
+
+<body>
+    <!-- Load icons for light/dark mode toggle button -->
+    <!-- Intended to avoid potential slow icon loading times if the mode is manually switched -->
+    <img src="/assets/images/light-mode.svg" style="display:none;">
+    <img src="/assets/images/dark-mode.svg" style="display:none;">
+
+    <!-- dark mode toggle button -->
+    <div id="dark-mode-btn">
+        <input id="btn-circle" type="button"></input>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-2 mb-5 shadow fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="/">Pete Smith
+            </a>
+
+            <!-- navbar toggle button - only visible in mobile format -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options"
+                aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbar-options">
+                <ul class="navbar-nav ml-auto" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-home-custom text-center" href="/" itemprop="url">Home</a>
+                    </li>
+                    <li class="nav-item mx-2 active active-custom" itemprop="name">
+                        <a class="nav-link nav-now-custom text-center" href="#" itemprop="url">Now<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-resume-custom text-center" href="/resume" itemprop="url">Résumé</a>
+                    </li>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-publications-custom text-center" href="/publications"
+                            itemprop="url">Publications</a>
+                    </li>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-coding-custom text-center" href="/coding" itemprop="url">Coding
+                            Projects</a>
+                    </li>
+                    <li class="nav-item mx-2" itemprop="name">
+                        <a class="nav-link nav-writing-custom text-center" href="/writing" itemprop="url">Writing
+                            Samples</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="body-content-custom">
+            <h1 class="text-center">What I'm Doing Now
+            </h1>
+
+            <div class="card-spacing"></div>
+
+            <h5 class="text-center"><i>Inspired by <a href="https://sive.rs/">Derek Sivers</a>'
+                    <a href="https://nownownow.com/">nownownow.com</a></i></h5>
+
+            <div class="card-spacing"></div>
+
+            <h5 class="text-center"><i>Last updated: Monday, June 10, 2024</i></h5>
+
+            <div class="card-spacing"></div>
+
+            <div>
+                <ul>
+                    <li><b>Reading:</b> I'm currently reading <i>The Hard Way</i> by Lee Child - one of the Jack
+                        Reacher books. I
+                        haven't read a Reacher book in a little while, and I forgot how exciting they are. I've also
+                        been reading <i>The Invisible Life of Addie LaRue</i> by V. E. Schwab, which is one of the most
+                        beautiful books I've ever read. I actually started <i>Addie LaRue</i> last summer, but I overdid
+                        it with my courseload last fall and got completely burned out (and had zero free time anyway) so
+                        I'm slowly getting to a point where I can actually finish the book.
+                    </li>
+                    <br>
+                    <li><b>Washington, D.C.:</b> I've been absolutely loving walking around DC and exploring the city.
+                        The Sculpture Garden is my
+                        favorite place right now, although I've been enjoying Dupont Circle recently as well. Normally I
+                        just like to go and read a book, drink some coffee, and maybe get some lunch while I'm there. I
+                        also went to the Pride Parade in DC this past Saturday, which was a lot of fun (thank you
+                        DMV weather for not raining).
+                    </li>
+                    <br>
+                    <li><b>Photography:</b> I've been taking a lot of pictures on my phone recently. UMD's campus is
+                        absolutely beautiful when the trees have leaves on them, and DC has so much beautiful
+                        architecture - it sort of feels wrong <i>not</i> to take pictures all the time. I've been
+                        posting a few on social media, however I'm currently trying to figure out a
+                        reliable way
+                        to be able to display them here without making the site's GitHub repo too big or anything. I've
+                        been playing around with nginx on an AWS Lightsail instance, but there's still some
+                        configuration stuff that I need to work out first before I can use it to host my photos.
+                    </li>
+                    <br>
+                    <li><b>Music:</b> I've been listening to a lot of David Bowie recently. I mean <i>a lot</i>. I've
+                        also been listening to a lot of The Last Dinner Party and Chappell Roan this year. Some specific
+                        songs (not by any of those artists) that I've been obsessed with recently are "Close to You" by
+                        Gracie Abrams and "Moon Girl" by Ha Vay. There's also the odd mix of classical trumpet
+                        solos/excerpts, and <i>A Love Supreme</i> by John Coltrane has been one of my favorite albums to
+                        listen to over the past month or so. Fun fact: I've been naming some of my papers for school
+                        after various songs/albums - check out my <a href="/writing">Writing Samples</a> and see if you
+                        can find them!
+                    </li>
+                    <br>
+                    <li><b>Academics:</b> I'm finishing up my undergrad at UMD College Park and will be
+                        graduating in December with a B.S. in Computer Science, B.A. in History, and Minor in Trumpet
+                        Performance! I'm looking forward to being done, but I'm also not particularly looking
+                        forward to working for the next 40-or-however-many-years :/
+                    </li>
+                    <br>
+                    <li><b>Academics, cont.:</b> On that note, I have been developing an increasing interest in
+                        programming language theory. I took a compilers class last fall and a runtime verification class
+                        this past spring and absolutely loved both of them. I'm probably doing an independent study this
+                        upcoming fall on property-based testing, however that hasn't been finalized yet. Perhaps this
+                        will give me an excuse to not fully launch my career yet and instead go to grad school for a
+                        bit? I guess we'll just have to see.
+                    </li>
+                    <br>
+                    <li><b>Misc.:</b> I've been thinking about starting a blog for a while now. I love breakfast
+                        sandwiches, so one thought I had was to review breakfast sandwiches in the DMV.
+                        I'm also going to start playing trumpet and riding my bike again - I haven't done either since
+                        last summer for various reasons, but trumpet is always fun and there's some great bike
+                        trails not too far away that I used to go on a lot. Now I just have to try not to crash my bike
+                        again.
+                    </li>
+                </ul>
+            </div>
+
+            <hr />
+
+            <!-- footer -->
+            <footer class="footer text-muted text-center" id="footer">
+                <p>&copy; 2024 Pete Smith | <a href="mailto:psmit703@outlook.com">psmit703@outlook.com</a></p>
+                <p><a href="/changelog">Changelog</a> | <a href="https://github.com/psmit703/personal-website">GitHub
+                        Repository</a></p>
+                <p><a href="/sitemap">Sitemap</a> | <a href="/privacy">Privacy Notice</a></p>
+                <p id="delete-cookies-wrapper"><span id="delete-cookies">Reset Dark Mode Preference</span></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- required for proper Bootstrap functionality -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

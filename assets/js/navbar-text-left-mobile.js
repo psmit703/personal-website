@@ -14,7 +14,7 @@ function adjustNavItems() {
     navWidth = parseInt(navWidth)
 
     // adjusts the navbar items to be centered or left-aligned depending on the screen width
-    if (navWidth < 768) {
+    if (navWidth < 992) {
         for (let i = 0; i < navItems.length; i++) {
             navItems[i].classList.remove("text-center")
         }
